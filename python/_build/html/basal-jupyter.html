@@ -32,7 +32,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Hvorfor Python?" href="basal-python.html" />
-    <link rel="prev" title="Installation" href="installation.html" />
+    <link rel="prev" title="Forord" href="forord.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -73,29 +73,38 @@
 <li class="navbar-special">
 <p class="margin-caption">Kom Igang</p>
 </li>
-  <li class="">
-    <a href="installation.html">Installation</a>
-  </li>
   <li class="active">
     <a href="">Hvad er Jupyter Notebooks?</a>
   </li>
   <li class="">
     <a href="basal-python.html">Hvorfor Python?</a>
   </li>
+  <li class="">
+    <a href="installation.html">Installation</a>
+  </li>
 <li class="navbar-special">
-<p class="margin-caption">Matematik med Python</p>
+<p class="margin-caption">Folkeskole Niveau</p>
 </li>
   <li class="">
     <a href="basal-matematik.html">Basal Matematik</a>
   </li>
   <li class="">
-    <a href="trigonometri.html">Trigonometri</a>
+    <a href="geometri.html">Geometri</a>
   </li>
   <li class="">
     <a href="ligninger.html">Ligninger</a>
   </li>
   <li class="">
     <a href="funktioner.html">Funktioner</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Gymnasie Niveau</p>
+</li>
+  <li class="">
+    <a href="funktioner-gym.html">Funktioner (Gymnasie Niveau)</a>
+  </li>
+  <li class="">
+    <a href="trigonometri.html">Trigonometri</a>
   </li>
 </ul>
 </nav>
@@ -170,6 +179,10 @@
             <a href="#hvad-er-markdown" class="nav-link">Hvad er Markdown?</a>
         </li>
     
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#andre-formatteringsmuligheder" class="nav-link">Andre formatteringsmuligheder</a>
+        </li>
+    
     </ul>
 </nav>
 
@@ -184,12 +197,40 @@
   <div class="section" id="hvad-er-jupyter-notebooks">
 <h1>Hvad er Jupyter Notebooks?<a class="headerlink" href="#hvad-er-jupyter-notebooks" title="Permalink to this headline">¶</a></h1>
 <p>Jupyter Notebooks er ved denne bog er skrevet i. Det er web baseret platform, der gør det muligt at skrive Python scripts. Jupyter Notebooks fungere som et celle baseret værktøj. Det betyder, at man i én notebook, faktisk kan skrive så mange scripts som man har lyst til. Dette gøres blot i individuelle celler. Hvis scriptet har et output, vil det blot blive vist under den pågældende celle.</p>
-<p>Jupyter Notebooks muliggøre desuden brugen af Markdown. Derfor kan en notebook også bruges som en tekstbehandler, såsom Microsoft Word. Dog på et noget lavere niveau. Hvor Word er mere “What You See Is What You Get”, så kræver Markdown at man kender de forskellige genveje. Men det skal jeg nok komme videre ind på, det er heldigvis ikke særlig svært.</p>
-<p>Udover Markdown, giver Jupyter Notebooks, mulighed for at benytte Latex formattering. Det er super fedt, i forhold til at skrive ligninger i en notebook. Vi kan endda konfigurere vores notebook, således at når vi laver matematik vha. Python, så bliver resultater også formateret i Latex, så det er letlæseligt.</p>
-<p>I Jupyter Notebooks, har elever mulighed for at lave matematik og naturvidenskabelige afleveringer. Fordi der er en celle opdeling af notebooks, betyder det at de er letlæselige. Desuden findes der en udvidelse til Jupyter, der giver mulighed for at lave og rette opgaver, direkte i Jupyter Notebooks. Udvidelsen giver også mulighed for at autorette funktioner. Denne udvidelse hedder <code class="docutils literal notranslate"><span class="pre">nbgrader</span></code>. Den skal vi nok komme til at snakke mere om.</p>
+<p>Vi kan bruge dette til at lave matematiske udregninger, f.eks. kan du nedenfor se en celle hvor jeg har benyttet en matematisk operator til at lægge to tal sammen. Dette er markeret i højre side som <strong>In</strong>, hvortil nedenunder vil der være markeret et output som <strong>Out</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Det vigtige er her, at Jupyter Notebooks fungere på den måde at hvis der er flere operationer som giver et output, så vil det kune være outputtet af den sidste operation som bliver vist. Se eksemplet nedenfor.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+<span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
+<p>Derfor, hvis vi gerne vil vise flere outputs på én gang, skal vi gemme hvert output i en variabel og så bruge funktionen <code class="docutils literal notranslate"><span class="pre">print</span></code> (som findes i stort set alle programmeringssprog), til at printe det ud i vores output.</p>
 <div class="section" id="hvad-er-markdown">
 <h2>Hvad er Markdown?<a class="headerlink" href="#hvad-er-markdown" title="Permalink to this headline">¶</a></h2>
+<p>Jupyter Notebooks muliggøre desuden brugen af Markdown. Derfor kan en notebook også bruges som en tekstbehandler, såsom Microsoft Word. Dog på et noget lavere niveau. Hvor Word er mere “What You See Is What You Get”, så kræver Markdown at man kender de forskellige genveje.</p>
 <p>Markdown benyttes i Jupyter Notebooks til tekst formatering. Det er super nemt at lære, selvom der ikke er noget generelt interface som der er i Microsoft Word. Vi er også lidt mere begrænsede end vi er i Word. Men til det vi har tænkt os at bruge det til, så har vi mere end rigeligt funktionalitet. Som tidligere nævnt, så er denne bog skrevet i Jupyter Notebooks. Men selve formateringen af hele bogen er mere eller mindre i Markdown. Undtagen kode blokkene selvfølgelig.</p>
+</div>
+<div class="section" id="andre-formatteringsmuligheder">
+<h2>Andre formatteringsmuligheder<a class="headerlink" href="#andre-formatteringsmuligheder" title="Permalink to this headline">¶</a></h2>
+<p>Udover Markdown, giver Jupyter Notebooks, mulighed for at benytte Latex formattering. Det er super fedt, i forhold til at skrive ligninger i en notebook. Vi kan endda konfigurere vores notebook, således at når vi laver matematik vha. Python, så bliver resultater også formateret i Latex, så det er letlæseligt. Det kunne f.eks. se således ud</p>
+<div class="math notranslate nohighlight">
+\[\frac{5}{4} \cdot 27\]</div>
+<p>I Jupyter Notebooks, har elever mulighed for at lave matematik og naturvidenskabelige afleveringer. Fordi der er en celle opdeling af notebooks, betyder det at de er letlæselige. Desuden findes der en udvidelse til Jupyter, der giver mulighed for at lave og rette opgaver, direkte i Jupyter Notebooks. Udvidelsen giver også mulighed for at autorette funktioner. Denne udvidelse hedder <code class="docutils literal notranslate"><span class="pre">nbgrader</span></code>. Den skal vi nok komme til at snakke mere om.</p>
 </div>
 </div>
 
@@ -202,7 +243,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="installation.html" title="previous page">Installation</a>
+    <a class='left-prev' id="prev-link" href="forord.html" title="previous page">Forord</a>
     <a class='right-next' id="next-link" href="basal-python.html" title="next page">Hvorfor Python?</a>
 
     </div>

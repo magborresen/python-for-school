@@ -31,6 +31,7 @@
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Funktioner (Gymnasie Niveau)" href="funktioner-gym.html" />
     <link rel="prev" title="Ligninger" href="ligninger.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -73,28 +74,37 @@
 <p class="margin-caption">Kom Igang</p>
 </li>
   <li class="">
-    <a href="installation.html">Installation</a>
-  </li>
-  <li class="">
     <a href="basal-jupyter.html">Hvad er Jupyter Notebooks?</a>
   </li>
   <li class="">
     <a href="basal-python.html">Hvorfor Python?</a>
   </li>
+  <li class="">
+    <a href="installation.html">Installation</a>
+  </li>
 <li class="navbar-special">
-<p class="margin-caption">Matematik med Python</p>
+<p class="margin-caption">Folkeskole Niveau</p>
 </li>
   <li class="">
     <a href="basal-matematik.html">Basal Matematik</a>
   </li>
   <li class="">
-    <a href="trigonometri.html">Trigonometri</a>
+    <a href="geometri.html">Geometri</a>
   </li>
   <li class="">
     <a href="ligninger.html">Ligninger</a>
   </li>
   <li class="active">
     <a href="">Funktioner</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Gymnasie Niveau</p>
+</li>
+  <li class="">
+    <a href="funktioner-gym.html">Funktioner (Gymnasie Niveau)</a>
+  </li>
+  <li class="">
+    <a href="trigonometri.html">Trigonometri</a>
   </li>
 </ul>
 </nav>
@@ -170,14 +180,6 @@
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#differentiering" class="nav-link">Differentiering</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#integration" class="nav-link">Integration</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
             <a href="#grafisk-fremstilling" class="nav-link">Grafisk fremstilling</a>
         </li>
     
@@ -192,7 +194,14 @@
         
               <div>
                 
-  <div class="section" id="funktioner">
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="funktioner">
 <h1>Funktioner<a class="headerlink" href="#funktioner" title="Permalink to this headline">¶</a></h1>
 <p>En af de vigtigste aspekter i matematikken er funktioner. Så det er uden tvivl vigtigt at vores værktøjer kan finde ud af at arbejde med funktion. Det kan vores yndlingsværktøj <code class="docutils literal notranslate"><span class="pre">sympy</span></code> heldigvis langt hen ad vejen. Jeg vil undlade at gennemgå formler for forskellige funktioner, for det er ikke det der er meningen med denne note. Jeg vil i stedet gå igennem hvilke værktøjer <code class="docutils literal notranslate"><span class="pre">sympy</span></code> giver os til at arbejde med funktioner og hvordan de bruges.</p>
 <div class="section" id="haeldningskoefficienter">
@@ -226,152 +235,6 @@
 </div>
 <p>Det virker jo helt som det skal</p>
 </div>
-<div class="section" id="differentiering">
-<h2>Differentiering<a class="headerlink" href="#differentiering" title="Permalink to this headline">¶</a></h2>
-<p>Det er selvfølgelig vigtigt at vores CAS værktøj kan finde ud af at differentiere funktioner. Det er jo en stor del af matematikken, og heldigvis kan vi prise os lykkelige med, at det ikke er noget problem for <code class="docutils literal notranslate"><span class="pre">sympy</span></code>. Vi skal, som altid, blot importere funktionaliteten først. Den funktion vi skal importere hedder <code class="docutils literal notranslate"><span class="pre">diff()</span></code>. Før vi kan gøre det skal vi dog altid lige huske at importere vores variable ind med også. Vi vil bruge variabel navnet <code class="docutils literal notranslate"><span class="pre">x</span></code> i det her tilfælde.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="n">diff</span>
-<span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="k">import</span> <span class="n">x</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Vi kan nu differentiere alle de funktioner vi overhovedet kan komme i tanke om, så lad os prøve det af. Vi vil prøve at differentiere den velkendte funktion <span class="math notranslate nohighlight">\(x^2\)</span>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle 2 x\]</div>
-</div>
-</div>
-<p>Fedt, det giver os jo ingen problemer. I <code class="docutils literal notranslate"><span class="pre">diff()</span></code> funktionen definere vi altså først hvilken matematisk funktion vi gerne vil differentiere. Efterfølgende sætter vi et komma og definere hvilken variabel vi gerne vil differentiere med hensyn til. Nu vil den hurtige læser så spørge “Betyder det at vi kan differentiere funktion med flere variable?”, og ja, det gør det. Det er nok ikke super relevant på gymnasieniveau, men nu får i den med nu hvor vi alligvel er i gang.</p>
-<p>For at differentiere funktione <span class="math notranslate nohighlight">\(x^2+y^2\)</span> i forhold til <span class="math notranslate nohighlight">\(y\)</span>, skal vi altså blot efter kommaet, specificere at det er <code class="docutils literal notranslate"><span class="pre">y</span></code> der skal differentieres i forhold til.</p>
-<p>Vi skal huske at importere <code class="docutils literal notranslate"><span class="pre">y</span></code> fra sympy inden vi forsøger at differentiere.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="k">import</span> <span class="n">y</span>
-
-<span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle 2 y\]</div>
-</div>
-</div>
-<p>Og så er der differentieret i forhold til <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
-<p>Vi kan selvfølgelig altid gemme resultatet for vores differentierede funktion i en variabel, så vi kan bruge det senere.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">differentiale</span> <span class="o">=</span> <span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Nu kan vi så bruge denne nye variabel i hvilken som helst celle vi vil. Den skal dog komme efter den celle hvor vi definerede variablen (Cellen over denne).</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">differentiale</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle 2 x\]</div>
-</div>
-</div>
-<p>Vi kan også anvende den i efterfølgende beregninger.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vi ganger resultatet af differentiale variablen med 2.</span>
-<span class="n">differentiale</span> <span class="o">*</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle 4 x\]</div>
-</div>
-</div>
-</div>
-<div class="section" id="integration">
-<h2>Integration<a class="headerlink" href="#integration" title="Permalink to this headline">¶</a></h2>
-<p>Når vi kan differentiere, bliver vi selvfølgelig også nød til at kunne integrere. Den opgave klarer <code class="docutils literal notranslate"><span class="pre">sympy</span></code> også uden problemer. Vi skal igen blot lige importere en funktion der kan hjælpe os. Integrations funktionen i <code class="docutils literal notranslate"><span class="pre">sympy</span></code> hedder <code class="docutils literal notranslate"><span class="pre">integrate()</span></code>. Den kan vi lige importere hurtigt.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="n">integrate</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Vi kan nu integrere alle de funktioner vi vil. Lad os prøve med at integrere den samme funktion som vi differentierede før, nemlig <span class="math notranslate nohighlight">\(x^2\)</span>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \frac{x^{3}}{3}\]</div>
-</div>
-</div>
-<p>Det giver altså ingen problemer. Vi kan integrere hvilke som helst funktion, som et helt almindeligt CAS program også kan integrere. Hvad nu hvis vi skal integrere med grænseværdier? Jamen det er selvfølgelig stadig dejligt nemt. Vi skal blot definere dem i en parentes sammen med den variabel der skal integreres med hensyn til. Hvis vi vil integrere den tidligere funktion <span class="math notranslate nohighlight">\(x^2\)</span> fra <span class="math notranslate nohighlight">\(0\)</span> til <span class="math notranslate nohighlight">\(\infty\)</span>, kommer det til at se ud som nedenstående.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vi skal lige have importeret uendelig</span>
-<span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="n">oo</span>
-
-<span class="c1"># Nu kan integralet udregnes</span>
-<span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">oo</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \infty\]</div>
-</div>
-</div>
-<p>Som det ses ovenfor, kan <code class="docutils literal notranslate"><span class="pre">sympy</span></code> sagtens finde ud af at arbejde med <span class="math notranslate nohighlight">\(\infty\)</span>. Det skal blot importeres først, ligesom det meste andet funktionalitet. Herefter udregner vi integralet. Efter vi definere hvilken funktion der ønskes integreret, indsætter vi et par parenteser hvor vi definere variabel, nedre grænse og øvre grænse. Og som vi kan se, er vores resultat totalt valid.</p>
-<p>Som vi så tidligere med differentialet, kan vi selvfølgelig også gemme resultatet af vores integrale funktion i en variabel.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">integrale</span> <span class="o">=</span> <span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Nu kan vi bruge vores variabel <code class="docutils literal notranslate"><span class="pre">integrale</span></code> lige når vi ville, så længe at vi bruger den i en celle der kommer efter den vi har defineret variablen i.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">integrale</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \frac{x^{3}}{3}\]</div>
-</div>
-</div>
-<p>Vi kan også bruge variablen til efterfølgende beregninger.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">integrale</span> <span class="o">*</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \frac{2 x^{3}}{3}\]</div>
-</div>
-</div>
-</div>
 <div class="section" id="grafisk-fremstilling">
 <h2>Grafisk fremstilling<a class="headerlink" href="#grafisk-fremstilling" title="Permalink to this headline">¶</a></h2>
 <p>Det er selvfølgelig vigtigt at vi kan lave et plot af vores funktion for at kunne lave en visuel inspektion. <code class="docutils literal notranslate"><span class="pre">sympy</span></code> gør det heldigvis virkelig nemt at få lavet et plot, af den funktion man arbejder med. Men som altid, skal vi selvfølgelig altid importere funktionaliteten først. Så vi skal importere <code class="docutils literal notranslate"><span class="pre">plot()</span></code> funktionen.</p>
@@ -383,7 +246,16 @@
 </div>
 </div>
 <p>Nu har vi altså funktionen til at kunne tegne vores funktioner.</p>
-<p>Vi kan prøve at tegne funktionen <span class="math notranslate nohighlight">\(x^2\)</span>, som jo er en parabel.</p>
+<p>Vi kan prøve at tegne funktionen <span class="math notranslate nohighlight">\(x^2\)</span>, som jo er en parabel. For at kunne gøre det, skal vi først have defineret overfor Python hvad <code class="docutils literal notranslate"><span class="pre">x</span></code> egentlig er. Vi kunne godt sige <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">5</span></code>, som vi normalt ville gøre. Men i dette tilfælde vil vi jo gerne tegne en graf, så derfor vil vi gerne have at <code class="docutils literal notranslate"><span class="pre">x</span></code> kan være en masse forskellige værdier.
+Det har <code class="docutils literal notranslate"><span class="pre">sympy</span></code> heldigvis en hurtig løsning på, vi skal blot importere <code class="docutils literal notranslate"><span class="pre">x</span></code> fra deres underbibliotek af variable. Det gør vi som vist nedenfor.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="k">import</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nu har vi <code class="docutils literal notranslate"><span class="pre">x</span></code> importeret som en <code class="docutils literal notranslate"><span class="pre">sympy</span></code> variabel og kan dermed bruge den til at lave vores plot som vist nedenfor.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
@@ -391,10 +263,22 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 1 Axes&gt;
+<img alt="_images/funktioner_13_0.png" src="_images/funktioner_13_0.png" />
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0xac727d0&gt;
 </pre></div>
 </div>
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7a377b0&gt;
+</div>
+</div>
+<p>Det er også muligt at tegne flere funktioner ind i ét koordinatsystem. Det gør man ved at</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/funktioner_15_0.png" src="_images/funktioner_15_0.png" />
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0xc17a3f0&gt;
 </pre></div>
 </div>
 </div>
@@ -412,6 +296,7 @@
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="ligninger.html" title="previous page">Ligninger</a>
+    <a class='right-next' id="next-link" href="funktioner-gym.html" title="next page">Funktioner (Gymnasie Niveau)</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

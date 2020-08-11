@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Funktioner (Gymnasie Niveau) &#8212; Matematik med Python</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/togglebutton.js"></script>
+    <script type="text/javascript" src="_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <script type="text/javascript" src="_static/mystnb.js"></script>
+    <script type="text/javascript" src="_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Trigonometri" href="trigonometri.html" />
+    <link rel="prev" title="Funktioner" href="funktioner.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Matematik med Python</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="forord.html">Forord</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Kom Igang</p>
+</li>
+  <li class="">
+    <a href="basal-jupyter.html">Hvad er Jupyter Notebooks?</a>
+  </li>
+  <li class="">
+    <a href="basal-python.html">Hvorfor Python?</a>
+  </li>
+  <li class="">
+    <a href="installation.html">Installation</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Folkeskole Niveau</p>
+</li>
+  <li class="">
+    <a href="basal-matematik.html">Basal Matematik</a>
+  </li>
+  <li class="">
+    <a href="geometri.html">Geometri</a>
+  </li>
+  <li class="">
+    <a href="ligninger.html">Ligninger</a>
+  </li>
+  <li class="">
+    <a href="funktioner.html">Funktioner</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Gymnasie Niveau</p>
+</li>
+  <li class="active">
+    <a href="">Funktioner (Gymnasie Niveau)</a>
+  </li>
+  <li class="">
+    <a href="trigonometri.html">Trigonometri</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/funktioner-gym.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#differentiering" class="nav-link">Differentiering</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#integration" class="nav-link">Integration</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="funktioner-gymnasie-niveau">
+<h1>Funktioner (Gymnasie Niveau)<a class="headerlink" href="#funktioner-gymnasie-niveau" title="Permalink to this headline">¶</a></h1>
+<p>Da vi tidligere har gennemgået matematikken for folkeskole niveau, kommer vi nu til det lidt mere dybdegående. Det er muligvis også her at Python virkelig kommer til en ret som et CAS værktøj til at kunne hjælpe eleverne. Husk at måden hvorpå funktioner kan plottes er beskrevet på siden for Funktioner på folkeskoleniveau.</p>
+<div class="section" id="differentiering">
+<h2>Differentiering<a class="headerlink" href="#differentiering" title="Permalink to this headline">¶</a></h2>
+<p>Det er selvfølgelig vigtigt at vores CAS værktøj kan finde ud af at differentiere funktioner. Det er jo en stor del af matematikken, og heldigvis kan vi prise os lykkelige med, at det ikke er noget problem for <code class="docutils literal notranslate"><span class="pre">sympy</span></code>. Vi skal, som altid, blot importere funktionaliteten først. Den funktion vi skal importere hedder <code class="docutils literal notranslate"><span class="pre">diff()</span></code>. Før vi kan gøre det skal vi dog altid lige huske at importere vores variable ind med også. Vi vil bruge variabel navnet <code class="docutils literal notranslate"><span class="pre">x</span></code> i det her tilfælde.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="n">diff</span>
+<span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="k">import</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vi kan nu differentiere alle de funktioner vi overhovedet kan komme i tanke om, så lad os prøve det af. Vi vil prøve at differentiere den velkendte funktion <span class="math notranslate nohighlight">\(x^2\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2 x\]</div>
+</div>
+</div>
+<p>Fedt, det giver os jo ingen problemer. I <code class="docutils literal notranslate"><span class="pre">diff()</span></code> funktionen definere vi altså først hvilken matematisk funktion vi gerne vil differentiere. Efterfølgende sætter vi et komma og definere hvilken variabel vi gerne vil differentiere med hensyn til. Nu vil den hurtige læser så spørge “Betyder det at vi kan differentiere funktion med flere variable?”, og ja, det gør det. Det er nok ikke super relevant på gymnasieniveau, men nu får i den med nu hvor vi alligvel er i gang.</p>
+<p>For at differentiere funktione <span class="math notranslate nohighlight">\(x^2+y^2\)</span> i forhold til <span class="math notranslate nohighlight">\(y\)</span>, skal vi altså blot efter kommaet, specificere at det er <code class="docutils literal notranslate"><span class="pre">y</span></code> der skal differentieres i forhold til.</p>
+<p>Vi skal huske at importere <code class="docutils literal notranslate"><span class="pre">y</span></code> fra sympy inden vi forsøger at differentiere.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="k">import</span> <span class="n">y</span>
+
+<span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2 y\]</div>
+</div>
+</div>
+<p>Og så er der differentieret i forhold til <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
+<p>Vi kan selvfølgelig altid gemme resultatet for vores differentierede funktion i en variabel, så vi kan bruge det senere.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">differentiale</span> <span class="o">=</span> <span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nu kan vi så bruge denne nye variabel i hvilken som helst celle vi vil. Den skal dog komme efter den celle hvor vi definerede variablen (Cellen over denne).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">differentiale</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2 x\]</div>
+</div>
+</div>
+<p>Vi kan også anvende den i efterfølgende beregninger.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vi ganger resultatet af differentiale variablen med 2.</span>
+<span class="n">differentiale</span> <span class="o">*</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 4 x\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="integration">
+<h2>Integration<a class="headerlink" href="#integration" title="Permalink to this headline">¶</a></h2>
+<p>Når vi kan differentiere, bliver vi selvfølgelig også nød til at kunne integrere. Den opgave klarer <code class="docutils literal notranslate"><span class="pre">sympy</span></code> også uden problemer. Vi skal igen blot lige importere en funktion der kan hjælpe os. Integrations funktionen i <code class="docutils literal notranslate"><span class="pre">sympy</span></code> hedder <code class="docutils literal notranslate"><span class="pre">integrate()</span></code>. Den kan vi lige importere hurtigt.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="n">integrate</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vi kan nu integrere alle de funktioner vi vil. Lad os prøve med at integrere den samme funktion som vi differentierede før, nemlig <span class="math notranslate nohighlight">\(x^2\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{x^{3}}{3}\]</div>
+</div>
+</div>
+<p>Det giver altså ingen problemer. Vi kan integrere hvilke som helst funktion, som et helt almindeligt CAS program også kan integrere. Hvad nu hvis vi skal integrere med grænseværdier? Jamen det er selvfølgelig stadig dejligt nemt. Vi skal blot definere dem i en parentes sammen med den variabel der skal integreres med hensyn til. Hvis vi vil integrere den tidligere funktion <span class="math notranslate nohighlight">\(x^2\)</span> fra <span class="math notranslate nohighlight">\(0\)</span> til <span class="math notranslate nohighlight">\(\infty\)</span>, kommer det til at se ud som nedenstående.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vi skal lige have importeret uendelig</span>
+<span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="n">oo</span>
+
+<span class="c1"># Nu kan integralet udregnes</span>
+<span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">oo</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \infty\]</div>
+</div>
+</div>
+<p>Som det ses ovenfor, kan <code class="docutils literal notranslate"><span class="pre">sympy</span></code> sagtens finde ud af at arbejde med <span class="math notranslate nohighlight">\(\infty\)</span>. Det skal blot importeres først, ligesom det meste andet funktionalitet. Herefter udregner vi integralet. Efter vi definere hvilken funktion der ønskes integreret, indsætter vi et par parenteser hvor vi definere variabel, nedre grænse og øvre grænse. Og som vi kan se, er vores resultat totalt valid.</p>
+<p>Som vi så tidligere med differentialet, kan vi selvfølgelig også gemme resultatet af vores integrale funktion i en variabel.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">integrale</span> <span class="o">=</span> <span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nu kan vi bruge vores variabel <code class="docutils literal notranslate"><span class="pre">integrale</span></code> lige når vi ville, så længe at vi bruger den i en celle der kommer efter den vi har defineret variablen i.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">integrale</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{x^{3}}{3}\]</div>
+</div>
+</div>
+<p>Vi kan også bruge variablen til efterfølgende beregninger.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">integrale</span> <span class="o">*</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{2 x^{3}}{3}\]</div>
+</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="funktioner.html" title="previous page">Funktioner</a>
+    <a class='right-next' id="next-link" href="trigonometri.html" title="next page">Trigonometri</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Magnus Borresen<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>
