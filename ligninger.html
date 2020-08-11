@@ -1,0 +1,628 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ligninger &#8212; Matematik med Python</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/togglebutton.js"></script>
+    <script type="text/javascript" src="_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <script type="text/javascript" src="_static/mystnb.js"></script>
+    <script type="text/javascript" src="_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Funktioner" href="funktioner.html" />
+    <link rel="prev" title="Trigonometri" href="trigonometri.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Matematik med Python</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="forord.html">Forord</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Kom Igang</p>
+</li>
+  <li class="">
+    <a href="installation.html">Installation</a>
+  </li>
+  <li class="">
+    <a href="basal-jupyter.html">Hvad er Jupyter Notebooks?</a>
+  </li>
+  <li class="">
+    <a href="basal-python.html">Hvorfor Python?</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Matematik med Python</p>
+</li>
+  <li class="">
+    <a href="basal-matematik.html">Basal Matematik</a>
+  </li>
+  <li class="">
+    <a href="trigonometri.html">Trigonometri</a>
+  </li>
+  <li class="active">
+    <a href="">Ligninger</a>
+  </li>
+  <li class="">
+    <a href="funktioner.html">Funktioner</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/ligninger.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#absolutte-vaerdier" class="nav-link">Absolutte værdier</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#andengradsligningen" class="nav-link">Andengradsligningen</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#simplificering" class="nav-link">Simplificering</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#expandering" class="nav-link">Expandering</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#faktorisering" class="nav-link">Faktorisering</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="ligninger">
+<h1>Ligninger<a class="headerlink" href="#ligninger" title="Permalink to this headline">¶</a></h1>
+<p>Meget matematik på gymnasiet vil foregå ved ligningsløsning. Ofte bliver ligninger så komplekse, at det ikke længere giver mening at løse dem i hånden. Derfor bruger man normalt et CAS værktøj. CAS værktøjet kender vi normalt som WordMat, TI-Nspire eller Maple osv. I Pythons biblioteker, findes der også CAS værktøjer. Det vil altså sige at CAS ikke er en medfødt funktion i Python. Men man skal altså importere et bibliotek, ligesom vi har set før, for at benytte sig af CAS. Der er forskellige biblioteker til dette. Nogle større, nogle mindre. Det bibliotek jeg vil bruge her, hedder <code class="docutils literal notranslate"><span class="pre">Sympy</span></code> og er uden tvivl et af de største biblioteker (Hvis ikke det største).</p>
+<p>Det vil sige at vi jo først skal have importeret <code class="docutils literal notranslate"><span class="pre">Sympy</span></code> for at kunne bruge det. Det ved vi jo allerede hvordan man gør. Jeg har tænkt mig at importere det, således at jeg blot kan bruge forkortelsen <code class="docutils literal notranslate"><span class="pre">sp</span></code> for at benytty dets funktioner. Vi kommer desuden til at bruge <code class="docutils literal notranslate"><span class="pre">math</span></code> biblioteket også, så det må vi hellere importere på samme tid.</p>
+<p>For at få vores resultater til at se godt ud, kan vi også importere <code class="docutils literal notranslate"><span class="pre">init_printing</span></code> fra sympy. Derefter kører vi funktionen. Resultatet af dette kan ses længere nede.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="n">init_printing</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">init_printing</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Sådan, nu har vi altså adgang til alle funktioner som sympy kommer med. Men da vi i først omgang kun skal bruge det, til at løse ligninger. Giver det mening kun at importere den funktionalitet. I Python kan man importere “under biblioteker” kaldet klasser, for kun at benytte de funktioner som kommer i disse. Den klasse som indeholder ligningsløsning i <code class="docutils literal notranslate"><span class="pre">sympy</span></code> hedder <code class="docutils literal notranslate"><span class="pre">solvers</span></code>, hvori der i den klasse findes en metode der hedder <code class="docutils literal notranslate"><span class="pre">solve</span></code>. <code class="docutils literal notranslate"><span class="pre">solve</span></code> er selve den funktion (metode) som vi bruger til at finde løsningen til en ligning. Derfor kan vi importere <code class="docutils literal notranslate"><span class="pre">solve</span></code> således</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy.solvers</span> <span class="k">import</span> <span class="n">solve</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nu er vi klar til nemt at kunne løse ligninger. Hvis vi får opgivet en ligning der er opgivet som lig med 0, kan vi altså løse den.</p>
+<p>F.eks. ligningen <span class="math notranslate nohighlight">\(x+5x-7=0\)</span></p>
+<p>I Python fungere potenser ved at man sætter <code class="docutils literal notranslate"><span class="pre">**</span></code> mellem sit tal/variabel og potensen. I <code class="docutils literal notranslate"><span class="pre">solve</span></code> funktionen indsætter vi først den venstre side af den ovenstående funktion. Derefter sætter vi et komma og specificire hvilken variabel vi vil løse for. Men da <code class="docutils literal notranslate"><span class="pre">x</span></code> endnu ikke er defineret som noget, skal vi først have gjort det. Her kan vi importere variablen fra <code class="docutils literal notranslate"><span class="pre">sympy</span></code> så den ved hvad vi snakker om. Klassen <code class="docutils literal notranslate"><span class="pre">sympy.abc</span></code> indeholder alle bogstaver som variable. Derfor kan vi importere følgende</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="k">import</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hvorefter vi kan løse ligning</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">solve</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">5</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/ligninger_7_0.png" src="_images/ligninger_7_0.png" />
+</div>
+</div>
+<p>Vi kan se at vores resultat er fint printet pga. vi har importeret og kørt <code class="docutils literal notranslate"><span class="pre">init_printing</span></code></p>
+<p>Ligninger med flere variable klarer <code class="docutils literal notranslate"><span class="pre">sympy</span></code> også uden problemer. Vi skal blot lige definere en ekstra variabel først, ligesom vi definerede <code class="docutils literal notranslate"><span class="pre">x</span></code> tidligere. Så lad os definere <code class="docutils literal notranslate"><span class="pre">y</span></code> denne gang.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="k">import</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nu kan vi så forsøge at løse en ligning der indeholder flere variable. Vi bliver selvfølgelig stadig nødt til at løse ligningen for en variabel ad gangen, men vi bliver i det mindste hjulpet på vej.</p>
+<p>Lad os prøve at løse ligningen</p>
+<div class="math notranslate nohighlight">
+\[5x+17y+7=0\]</div>
+<p>Når vi skal indsætte vores variabel efter kommaet, definere vi blot den variabel vi vil løse for. Det vil sige at hvis vi vil løse ligningen for <code class="docutils literal notranslate"><span class="pre">x</span></code> gør vi som nedenstående eksempel.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">solve</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">17</span><span class="o">*</span><span class="n">y</span><span class="o">+</span><span class="mi">7</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/ligninger_12_0.png" src="_images/ligninger_12_0.png" />
+</div>
+</div>
+<p>Hvis vi istedet vil løse for <code class="docutils literal notranslate"><span class="pre">y</span></code>, ser det således ud.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">solve</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">17</span><span class="o">*</span><span class="n">y</span><span class="o">+</span><span class="mi">7</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/ligninger_14_0.png" src="_images/ligninger_14_0.png" />
+</div>
+</div>
+<p>Løsningerne kan nu bruges til at bestemme de to variable.</p>
+<div class="section" id="absolutte-vaerdier">
+<h2>Absolutte værdier<a class="headerlink" href="#absolutte-vaerdier" title="Permalink to this headline">¶</a></h2>
+<p>I Python arbejder vi selvfølgelig også med absolutte værdier. Så der findes altså en funktion, som kommer indbygget i Python, der finder den absolutte værdi af hvad end man fodre den med. Denne funktion hedder blot <code class="docutils literal notranslate"><span class="pre">abs()</span></code> af det engelske <strong>absolute</strong>. Lad os prøve den af og se om det virker.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/ligninger_17_0.png" src="_images/ligninger_17_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">abs</span><span class="p">(</span><span class="mi">15</span><span class="o">-</span><span class="mi">27</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/ligninger_18_0.png" src="_images/ligninger_18_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/ligninger_19_0.png" src="_images/ligninger_19_0.png" />
+</div>
+</div>
+<p>Vi ser altså funktionen virker med alle de udtryk vi fodre den med. Den kan også bruges hvis vi f.eks. vil gange den absolutte værdi af et tal, med et andet tal. Lad os prøve at gange den absolutte værdi af <span class="math notranslate nohighlight">\(-20\)</span> med <span class="math notranslate nohighlight">\(4\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">)</span><span class="o">*</span><span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/ligninger_21_0.png" src="_images/ligninger_21_0.png" />
+</div>
+</div>
+<p>Så vi kan uden problemer regne med absolutte værdier i Python.</p>
+</div>
+<div class="section" id="andengradsligningen">
+<h2>Andengradsligningen<a class="headerlink" href="#andengradsligningen" title="Permalink to this headline">¶</a></h2>
+<p>Andengradsligningen som vi allesammen kender den, kommer på formen <span class="math notranslate nohighlight">\(ax^2+bx+c=0\)</span>. Denne kan vi selvfølgelig også regne i Python. Dette gøres igen blot med <code class="docutils literal notranslate"><span class="pre">sympy</span></code>’s <code class="docutils literal notranslate"><span class="pre">solve</span></code> funktion. Lad os prøve med 3 forskellige andengradsligninger som vi ved giver enten 2 løsninger, 1 løsning eller ingen løsninger.</p>
+<p>Ligningen <span class="math notranslate nohighlight">\(2x^2+6x+4=0\)</span> bør give os to løsninger.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">solve</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="mi">6</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">4</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/ligninger_24_0.png" src="_images/ligninger_24_0.png" />
+</div>
+</div>
+<p>Det gør den altså også.</p>
+<p>Lad os prøve med ligningen <span class="math notranslate nohighlight">\(x^2-2x+1=0\)</span> som bør give os én enkelt løsning.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">solve</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/ligninger_26_0.png" src="_images/ligninger_26_0.png" />
+</div>
+</div>
+<p>Det holder altså også stik.</p>
+<p>Lad os til sidst forsøge os med ligningen <span class="math notranslate nohighlight">\(2x^2-2x+1=0\)</span> som bør give os 0 løsninger.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">solve</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/ligninger_28_0.png" src="_images/ligninger_28_0.png" />
+</div>
+</div>
+<p>Ah, denne løsninger giver os altså noget med nogle komplekse tal. Det skal man lige have i baghovedet. Python kan godt finde ud af at arbejde med komplekse tal. Når man så arbejder på gymnasie niveau, vil der selvfølgelig være nogle tidspunkter, som i andengradsligningen, hvor der egentlig findes en løsning. Men vi vælger at sige at der ingen løsning er, fordi vi endnu ikke har lært at arbejde med komplekse tal.</p>
+<p>Så vi kan altså sagtens, ved hjælp af <code class="docutils literal notranslate"><span class="pre">sympy</span></code>, arbejde med andengradsligninger.</p>
+<p>Men lad os nu for sjovs skyld, sige at vi er interesseret i at vide hvordan flowet for udregningen ser ud for et værktøj som <code class="docutils literal notranslate"><span class="pre">sympy</span></code>. Det kan vi nemlig nemt ved bare at lave vores egen funktion til at løse andengradsligningen. Det kunne også være at vi godt kunne tænke os at få skrevet diskriminanten ud i stedet for blot resultatet.</p>
+<p>Hvis vi skal laves vores egen Python funktion, så er der lige et par basale ting vi skal vide først. For at definere en funktion, skal vi blot skrive <code class="docutils literal notranslate"><span class="pre">def</span></code> efterfulgt af et mellemrum, et funktionsnavn, to parenteser og et kolon. Det kunne f.eks. så sådan her ud <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">dette_er_en_funktion()</span></code>. Husk at vi stadig ikke kan bruge mellemrum imellem variabel navne i Python og det kan vi altså heller ikke i funktions navne. Derfor bruger jeg underscores.</p>
+<p>Indenfor de to parenteser kan vi definere det vi kalder for parametre. Det er altså ligesom når vi bruge <code class="docutils literal notranslate"><span class="pre">solve()</span></code> funktionen i <code class="docutils literal notranslate"><span class="pre">sympy</span></code>. Her har vi 2 parametre i og med at vi først indsætter en ligningen eftefulgt af et komma og derefter den variabel vi vil løse med hensyn til. Det samme kan vi gøre for vores egen funktion. De parametre der er vigtig for os at vide for at løse en andengradsligning er, selvfølgelig <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> og <code class="docutils literal notranslate"><span class="pre">c</span></code>. Så vi kan altså lave en funktion som ser således ud <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">andengrads_loser(a,</span> <span class="pre">b,</span> <span class="pre">c):</span></code>. Lad os prøve det i en kode celle.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definér funktionen</span>
+<span class="k">def</span> <span class="nf">andengrads_loser</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="c1"># Alt hvad der er indrykket med 4 mellemrum fortæller Python at det hører til denne funktion</span>
+    
+    <span class="c1"># Først findes diskriminanten ved den kendte formel</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">a</span> <span class="o">*</span> <span class="n">c</span>
+    
+    <span class="c1"># Der benyttes et boolsk udtryk til at vurdere om determinaten er større eller mindre end 0</span>
+    <span class="k">if</span> <span class="n">d</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="c1"># Hvis determinanten er mindre end 0</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Der er ingen løsninger til denne ligning&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Hvis determinanten er større end 0</span>
+        <span class="n">x1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">d</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+        <span class="n">x2</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">-</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">d</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+        
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Diskriminanten er: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Den ene løsning er: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x1</span><span class="p">))</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Den anden løsning er: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Jeg er lige blevet nødt til at skrive alt koden på én gang, da man ikke bare kan definere funktioner uden at give nogen form for kode. Men det er også okay. Jeg har skrevet nogle kommentarer ned igennem koden, der gerne skulle gøre det nemmere at følge med i. Vi beregner altså først determinanten ud fra de parametre som er givet ved <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> og <code class="docutils literal notranslate"><span class="pre">c</span></code> når funktionen bliver kaldt. Herefter benyttes et boolsk udtryk til at finde ud af om determinanten er større eller mindre end 0. Hvis determinanten er mindre end 0, printer vi til brugeren at der ikke findes nogen løsninger. Det vil altså sige at hvis <code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">&lt;</span> <span class="pre">0</span></code> er sand, vil der ikke være nogen løsninger. Hvis den derimod er falsk, vil løsningerne blive udreget og printet til brugeren.</p>
+<p>Men hvad nu hvis determinanten er præcis <span class="math notranslate nohighlight">\(0\)</span>? Tja, lige nu vil koden bare finde frem til løsningen og derefter printe den 2 gange. Men vi kan sagtens tage højde for tilfældet blot ved at indsætte et lille stykke boolsk logik mere. Se nedenfor.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definér funktionen</span>
+<span class="k">def</span> <span class="nf">andengrads_loser</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="c1"># Alt hvad der er indrykket med 4 mellemrum fortæller Python at det hører til denne funktion</span>
+    
+    <span class="c1"># Først findes diskriminanten ved den kendte formel</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">a</span> <span class="o">*</span> <span class="n">c</span>
+    
+    <span class="c1"># Der benyttes et boolsk udtryk til at vurdere om determinaten er større eller mindre end 0</span>
+    <span class="k">if</span> <span class="n">d</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="c1"># Hvis determinanten er mindre end 0</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Der er ingen løsninger til denne ligning&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">d</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">x1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">d</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+        
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Diskriminanten er: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Den eneste løsning der findes er: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Hvis determinanten er større end 0</span>
+        <span class="n">x1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">d</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+        <span class="n">x2</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">-</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">d</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+        
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Diskriminanten er: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Den ene løsning er: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x1</span><span class="p">))</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Den anden løsning er: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Med disse få ekstra linjer kode, kan vi også tjekke om diskriminanten er lig med <span class="math notranslate nohighlight">\(0\)</span> og printe dette ud til brugeren.</p>
+<p>Lad os teste vores nye funktion med de samme andengradsligninger, vi testede tidligere.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">andengrads_loser</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Diskriminanten er: 4
+Den ene løsning er: -1.0
+Den anden løsning er: -2.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">andengrads_loser</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Diskriminanten er: 0
+Den eneste løsning der findes er: 0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">andengrads_loser</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Der er ingen løsninger til denne ligning
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vores andengradsligningsløser fungere altså ganske fint efter hensigten.</p>
+</div>
+<div class="section" id="simplificering">
+<h2>Simplificering<a class="headerlink" href="#simplificering" title="Permalink to this headline">¶</a></h2>
+<p>Nogle gange kan der være behov for at simplicere nogle tal. Det kan man gøre med <code class="docutils literal notranslate"><span class="pre">sympy</span></code>. Det vil sige at vi altså tager et stort udtryk og gør det mindre. Det gør vi med <code class="docutils literal notranslate"><span class="pre">sympy</span></code> funktionen <code class="docutils literal notranslate"><span class="pre">simplify</span></code>, så den skal vi selvfølgelig lige have importeret først.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="n">simplify</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">sin</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nu kan vi så bruge funktionen til at simplificere et stort eller træls udtryk. Det kan f.eks. være <span class="math notranslate nohighlight">\(cos^2(x)+sin^2(x)\)</span>, som vi jo allesammen ved er det samme som <span class="math notranslate nohighlight">\(1\)</span>. Men ved <code class="docutils literal notranslate"><span class="pre">sympy</span></code> også det?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simplify</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/ligninger_41_0.png" src="_images/ligninger_41_0.png" />
+</div>
+</div>
+<p>Selvfølgelig ved <code class="docutils literal notranslate"><span class="pre">sympy</span></code> det! Men hvad nu hvis vi har en stor brøk som vi gerne vil have skaleret lidt ned? Vi kan jo prøve med brøken</p>
+<div class="math notranslate nohighlight">
+\[\frac{x^3+x^1-x-1}{x^2+2x+1}\]</div>
+<p>Den kan simplificeres helt ned til <span class="math notranslate nohighlight">\(x-1\)</span> så lad os se om <code class="docutils literal notranslate"><span class="pre">sympy</span></code> kan det.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simplify</span><span class="p">((</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/ligninger_43_0.png" src="_images/ligninger_43_0.png" />
+</div>
+</div>
+<p>Ingen problem.</p>
+</div>
+<div class="section" id="expandering">
+<h2>Expandering<a class="headerlink" href="#expandering" title="Permalink to this headline">¶</a></h2>
+<p>Af mangel på bedre ord, kommer dette afsnit til at hedde ekspandering. Vi kan altså nogle gange have behov for at få udvidet en udtryk der står inden for et par parenteser. Eller vi kan have flere parenteser der skal ganges sammen. Det kan <code class="docutils literal notranslate"><span class="pre">sympy</span></code> selvfølgelig hjælpe med. Vi skal bare bruge funktionen <code class="docutils literal notranslate"><span class="pre">expand()</span></code>. Så den får vi lige importeret.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="n">expand</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Så, lad os prøve at se hvordan vi kan udvide et udtryk som <span class="math notranslate nohighlight">\((x-1)^2\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">expand</span><span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/ligninger_48_0.png" src="_images/ligninger_48_0.png" />
+</div>
+</div>
+<p>Det giver altså det resultat som vi havde forventet. Hvad så hvis, vi har 2 parenteser der er ganget sammen? Som f.eks. <span class="math notranslate nohighlight">\((x+1)\cdot (x-1)\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">expand</span><span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/ligninger_50_0.png" src="_images/ligninger_50_0.png" />
+</div>
+</div>
+<p>Det er heller ingen problem. Kan vi mon gøre det med flere end 2 parenteser.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">expand</span><span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/ligninger_52_0.png" src="_images/ligninger_52_0.png" />
+</div>
+</div>
+<p>Selvfølgelig.</p>
+</div>
+<div class="section" id="faktorisering">
+<h2>Faktorisering<a class="headerlink" href="#faktorisering" title="Permalink to this headline">¶</a></h2>
+<p>Faktorisering er en af de ting man bliver rigtig glad for at man er god til. Men man kan selvfølgelig altid blive hjulpet lidt på vej af vores yndlingsværktøj, <code class="docutils literal notranslate"><span class="pre">sympy</span></code>. Vi skal blot bruge funktionen <code class="docutils literal notranslate"><span class="pre">factor</span></code>, så vi må hellere lige importere den.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="n">factor</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lad os så prøve at faktorisere et begreb som <span class="math notranslate nohighlight">\(x^3-x^2+x-1\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/ligninger_57_0.png" src="_images/ligninger_57_0.png" />
+</div>
+</div>
+<p>Det klarer vi uden problemer. Det virker selvfølgelig også med udtryk der indeholder flere variable. Vi skal bare huske at importere alle vores variable først fra <code class="docutils literal notranslate"><span class="pre">sympy.abc</span></code>. Hvilket betyder, at hvis vi vil faktorisere et udtryk med flere variable, skal de importeres som vi har set tidligere, men ser igen her.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="k">import</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nu har vi altså importeret <code class="docutils literal notranslate"><span class="pre">y</span></code> og <code class="docutils literal notranslate"><span class="pre">z</span></code> og kan bruge disse på ligefod med <code class="docutils literal notranslate"><span class="pre">x</span></code>. Lad os prøve at faktorisere et lidt større udtryk med flere variable, såsom <span class="math notranslate nohighlight">\($x^2\cdot z + 4\cdot x\cdot y\cdot z + 4\cdot y^2\cdot z\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">z</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="o">*</span><span class="n">z</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/ligninger_61_0.png" src="_images/ligninger_61_0.png" />
+</div>
+</div>
+<p>Uden problemer.</p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="trigonometri.html" title="previous page">Trigonometri</a>
+    <a class='right-next' id="next-link" href="funktioner.html" title="next page">Funktioner</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Magnus Borresen<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,422 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Trigonometri &#8212; Matematik med Python</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/togglebutton.js"></script>
+    <script type="text/javascript" src="_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <script type="text/javascript" src="_static/mystnb.js"></script>
+    <script type="text/javascript" src="_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Ligninger" href="ligninger.html" />
+    <link rel="prev" title="Basal Matematik" href="basal-matematik.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Matematik med Python</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="forord.html">Forord</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Kom Igang</p>
+</li>
+  <li class="">
+    <a href="installation.html">Installation</a>
+  </li>
+  <li class="">
+    <a href="basal-jupyter.html">Hvad er Jupyter Notebooks?</a>
+  </li>
+  <li class="">
+    <a href="basal-python.html">Hvorfor Python?</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Matematik med Python</p>
+</li>
+  <li class="">
+    <a href="basal-matematik.html">Basal Matematik</a>
+  </li>
+  <li class="active">
+    <a href="">Trigonometri</a>
+  </li>
+  <li class="">
+    <a href="ligninger.html">Ligninger</a>
+  </li>
+  <li class="">
+    <a href="funktioner.html">Funktioner</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/trigonometri.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#trekantsloser" class="nav-link">Trekantsløser</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="trigonometri">
+<h1>Trigonometri<a class="headerlink" href="#trigonometri" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">math</span></code> har indbyggede funktioner til at finde sinus, cosinus og tanget. Ved alle disse funktioner, giver man en tal/vinkel, som man ønsker at finde sinus, cosinus eller tanget til. Python vil herefter vise resultatet i radianer. Dette kan laves om til grader, hvis man ønsker dette. Nedenstående eksempler vil vise hvordan man finder sinus, cosinus og tangent til tal der både er angivet i radianer og i grader.</p>
+<p>Men for at vi kan bruge nogle af disse smarte funktioner, må vi nok hellere lige få importeret <code class="docutils literal notranslate"><span class="pre">math</span></code> biblioteket først.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sinus i radianer</span>
+<span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>0.7451131604793488
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sinus i grader</span>
+<span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">40</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>0.6427876096865393
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cosinus i radianer</span>
+<span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>-0.6669380616522619
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cosins i grader</span>
+<span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">40</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>0.766044443118978
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tangent i radianer</span>
+<span class="n">math</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>-1.117214930923896
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tangent i grader</span>
+<span class="n">math</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">40</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>0.8390996311772799
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hvis man ønsker resultatet i grader, skal man f.eks. putte <code class="docutils literal notranslate"><span class="pre">math.sin(40)</span></code> ind i funktionen <code class="docutils literal notranslate"><span class="pre">math.degrees()</span></code>. Konventionen for at gøre dette i programmering er normalt, at man gemmer <code class="docutils literal notranslate"><span class="pre">math.sin(40)</span></code> i en variable, og derefter putter man variable ind i <code class="docutils literal notranslate"><span class="pre">math.degrees()</span></code>. Se nedenstående for eksempel</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Find resultat i grader</span>
+<span class="n">resultat_radian</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+
+<span class="c1"># Nu er resultatet i radianer gemt i variablen &#39;resultat_radian&#39;. Nu kan resultatet findes i grader</span>
+<span class="n">math</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">resultat_radian</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>42.6918393551207
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Find resultat i grader</span>
+<span class="n">resultat_radian</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+
+<span class="c1"># Nu er resultatet i radianer gemt i variablen &#39;resultat_radian&#39;. Nu kan resultatet findes i grader</span>
+<span class="n">math</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">resultat_radian</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>-38.2127361293105
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Find resultat i grader</span>
+<span class="n">resultat_radian</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+
+<span class="c1"># Nu er resultatet i radianer gemt i variablen &#39;resultat_radian&#39;. Nu kan resultatet findes i grader</span>
+<span class="n">math</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">resultat_radian</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>-64.01170035093904
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="trekantsloser">
+<h2>Trekantsløser<a class="headerlink" href="#trekantsloser" title="Permalink to this headline">¶</a></h2>
+<p>En stor del af matematikværktøjer i folkeskolen og på gymnasiet er at kunne løse trekanter nemt. WordMat har f.eks. en trekantsløser, der gør det grafisk nemt at indtaste 3 kendte værdier omkring trekanten og efterfølgende få udregnet de resterende værdier. Python har ikke et grafisk værktøj til dette, men ikke desto mindre findes der en trekantsløser. Denne kommer i et eksternt bibliotek som skal hentes vha. pip. For at hente biblioteket, skrives i terminalen eller i commando prompt.</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">trianglesolver</span></code></p>
+<p>Når denne er installeret, skal den blot importeres, hvorefter alle funktioner frit kan bruges. Importeringen foregår ligesom med <code class="docutils literal notranslate"><span class="pre">math</span></code> biblioteket.
+Man ønsker dog normalt ikke at skulle skrive <code class="docutils literal notranslate"><span class="pre">trianglesolver</span></code> hver gang man skal benytte sig af biblioteket. Derfor kan man importere det og give det et kaldenavn, som forkortelse. Python ved så herefter at hver gang man skriver dette kaldenavn, så referere man til <code class="docutils literal notranslate"><span class="pre">trianglesolver</span></code>.</p>
+<p>For at importere med et kaldenavn, gør man følgende</p>
+<p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">trianglesolver</span> <span class="pre">as</span> <span class="pre">ts</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">trianglesolver</span> <span class="k">as</span> <span class="nn">ts</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">trianglesolver</span></code> er nu importeret og alle funktioner er tilgængelige. Når man skal bruge biblioteket, skal man blot referere til det som <code class="docutils literal notranslate"><span class="pre">ts</span></code>.</p>
+<p>Hvis man vil løse en trekant, skal man som minimum kende tre karakteristiske dele omkring trekanten. Det kan enten være siderne, vinklerne eller nogen af siderne og nogle af vinklerne. Trekanten ABC, har siderne <code class="docutils literal notranslate"><span class="pre">a=3</span></code> og <code class="docutils literal notranslate"><span class="pre">b=4</span></code> og vinkel <code class="docutils literal notranslate"><span class="pre">C=25</span> <span class="pre">grader</span></code> og man skal finde siden c. Denne kan man nu løse med <code class="docutils literal notranslate"><span class="pre">trianglesolver</span></code>. Først skal alle siderne i trekanten defineres, dette kan heldigvis gøres på en enkelt linje. Disse variable skal sættes lig med noget. Altså de skal indeholde et eller andet. I dette tilfælde, skal de indeholde løsningen. For at definere hvordan <code class="docutils literal notranslate"><span class="pre">trianglesolver</span></code> skal finde løsningen, skal man bruge den indbyggede funktion <code class="docutils literal notranslate"><span class="pre">solve()</span></code>. I <code class="docutils literal notranslate"><span class="pre">solve()</span></code> skal man angive de kendte værdier og hvad de er lig med. Se eksemplet nedenfor</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mi">25</span><span class="o">*</span><span class="n">ts</span><span class="o">.</span><span class="n">degree</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nu er løsningen altså gemt i de 6 variable <code class="docutils literal notranslate"><span class="pre">a,</span> <span class="pre">b,</span> <span class="pre">c,</span> <span class="pre">A,</span> <span class="pre">B,</span> <span class="pre">C</span></code>. Derved her vi nu alle siderne gemt i <code class="docutils literal notranslate"><span class="pre">a,</span> <span class="pre">b,</span> <span class="pre">c</span></code> og vinklerne gemt i <code class="docutils literal notranslate"><span class="pre">A,</span> <span class="pre">B,</span> <span class="pre">C</span></code>. Grunden til at man ganger C værdien med <code class="docutils literal notranslate"><span class="pre">ts.degree</span></code> er, at <code class="docutils literal notranslate"><span class="pre">trianglesolver</span></code> forventer en værdi i radianer, men da opgavens værdi var i grader, skal denne altså konverteres til radianer.</p>
+<p>Man kan nu få Python til at vise resultatet for siden c. Dette gøres ved blot at skrive c i en celle.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>1.8023909429200986
+</pre></div>
+</div>
+</div>
+</div>
+<p>Side c har altså længden 1,8. Det er vigtigt at huske at Python angiver decimal tal med et <code class="docutils literal notranslate"><span class="pre">.</span></code> og <strong>IKKE</strong> et <code class="docutils literal notranslate"><span class="pre">,</span></code>.</p>
+<p>Man kan også få angivet de ukendte vinkler <code class="docutils literal notranslate"><span class="pre">A</span></code> og <code class="docutils literal notranslate"><span class="pre">B</span></code>. Dette gøres på samme måde som ved siden <code class="docutils literal notranslate"><span class="pre">c</span></code>. Dog er resultatet af <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">og</span> <span class="pre">B</span></code> lige nu angivet i radianer, så dette skal omskrives til grader. Dette gøres ved blot at dividere med den samme konstant <code class="docutils literal notranslate"><span class="pre">ts.degree</span></code> som der blev multipliceret med tidligere.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">/</span> <span class="n">ts</span><span class="o">.</span><span class="n">degree</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>44.70279717575587
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">B</span> <span class="o">/</span> <span class="n">ts</span><span class="o">.</span><span class="n">degree</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>110.29720282424412
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">A</span></code> har altså en vinkel på 44,7 grader og <code class="docutils literal notranslate"><span class="pre">B</span></code> har en vinkel på 110,3 grader.</p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="basal-matematik.html" title="previous page">Basal Matematik</a>
+    <a class='right-next' id="next-link" href="ligninger.html" title="next page">Ligninger</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Magnus Borresen<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>
