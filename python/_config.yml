@@ -1,0 +1,8 @@
+# Book settings
+title: Matematik med Python
+author: Magnus Borresen
+logo: logo.png
+
+latex:
+  latex_documents:
+    targetname: book.tex

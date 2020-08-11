@@ -1,0 +1,16 @@
+- file: forord
+
+- header: Kom Igang
+- file: basal-jupyter
+- file: basal-python
+- file: installation
+
+- header: Folkeskole Niveau
+- file: basal-matematik
+- file: geometri
+- file: ligninger
+- file: funktioner
+
+- header: Gymnasie Niveau
+- file: funktioner-gym
+- file: trigonometri
