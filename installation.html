@@ -31,8 +31,8 @@
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Hvad er Jupyter Notebooks?" href="basal-jupyter.html" />
-    <link rel="prev" title="Forord" href="forord.html" />
+    <link rel="next" title="Basal Matematik" href="basal-matematik.html" />
+    <link rel="prev" title="Hvorfor Python?" href="basal-python.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -73,29 +73,38 @@
 <li class="navbar-special">
 <p class="margin-caption">Kom Igang</p>
 </li>
-  <li class="active">
-    <a href="">Installation</a>
-  </li>
   <li class="">
     <a href="basal-jupyter.html">Hvad er Jupyter Notebooks?</a>
   </li>
   <li class="">
     <a href="basal-python.html">Hvorfor Python?</a>
   </li>
+  <li class="active">
+    <a href="">Installation</a>
+  </li>
 <li class="navbar-special">
-<p class="margin-caption">Matematik med Python</p>
+<p class="margin-caption">Folkeskole Niveau</p>
 </li>
   <li class="">
     <a href="basal-matematik.html">Basal Matematik</a>
   </li>
   <li class="">
-    <a href="trigonometri.html">Trigonometri</a>
+    <a href="geometri.html">Geometri</a>
   </li>
   <li class="">
     <a href="ligninger.html">Ligninger</a>
   </li>
   <li class="">
     <a href="funktioner.html">Funktioner</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Gymnasie Niveau</p>
+</li>
+  <li class="">
+    <a href="funktioner-gym.html">Funktioner (Gymnasie Niveau)</a>
+  </li>
+  <li class="">
+    <a href="trigonometri.html">Trigonometri</a>
   </li>
 </ul>
 </nav>
@@ -159,9 +168,16 @@
 
     </div>
     <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#installation-af-biblioteker" class="nav-link">Installation af biblioteker</a>
+        </li>
     
     </ul>
 </nav>
@@ -177,8 +193,19 @@
   <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
 <p>Vi skal have installeret de komponenter der er nødvendige for at kunne gøre brug af Jupyter Notebooks. Den vigtigste ingrediens er selvfølgelig Python. Der er flere måder at installere Python på, men for at bruge command line/terminalen mindst muligt, så foreslår jeg at installere Python igennem Anaconda distributionen. Anaconda giver en grafisk interface, til installering af selve Python, biblioteker og Jupyter Notebooks. Det kan umiddelbart være skræmmende at benytte command line, hvis det er første gang. <a class="reference external" href="https://www.anaconda.com/products/individual">Så derfor vil jeg anbefale at downloade Anaconda Pyton 3.x herfra</a>.</p>
+<p>Det skal siges at Python kommer præinstalleret på Mac og Linux. Dog vil jeg stadig anbefale at benytte Anaconda Distributionen af Python, da den simpelthen bare er nemmere at have med at gøre, fordi den har det her grafiske interface.</p>
 <p>Installationen burde være rimelig gnidningsfri.</p>
 <p>Det smarte ved at bruge Anaconda er, at Anaconda Navigator følger med. Det betyder at i stedet for at benytte Windows Command Line eller MacOS Terminale, så kan vi benytte os af en grafisk nagivator. Desuden kan Jupyter Notebooks åbnes direkte her igennem. Jupyter Notebooks, burde komme som standard sammen med installationen af Anaconda.</p>
+<div class="section" id="installation-af-biblioteker">
+<h2>Installation af biblioteker<a class="headerlink" href="#installation-af-biblioteker" title="Permalink to this headline">¶</a></h2>
+<p>For at kunne benytte de funktionaliteter, som eksterne Python Biblioteker giver os, er vi nødt til at kunne installere dem. Dette er heldigvis nemt at gøre nu hvor vi har Anaconda installeret.</p>
+<p>I Python er det muligt at lave noget der hedder virtuelle miljøer. Det betyder, at når du laver ét bestemt Python program, så kan du bruge ét miljø, med nogle bestemt versioner af biblioteker. Mens du kan arbejde på et andet program med nogle andre versioner af de samme biblioteker. Det er ikke noget vi vil gå i dybden med nu, men i programmeringsverdenen er det meget omtalt. Derfor synes jeg det er vigtigt at gøre opmærksom på det.</p>
+<p>For nu, installere vi blot bibliotekerne globalt. Det vil sige, at hver gang vi starter en ny notebook, så benytter vi de samme versioner af bibliotekerne som i alle vores andre notebooks.</p>
+<p>Installationen af biblioteker foregår igennem terminalen. Det kan være lidt skræmmende hvis det er første gang man åbner den, men bare rolig. Vi skal kun skrive én enkelt linje.</p>
+<p>Det foregår mere eller mindre på samme måde for Mac og Windows. På en Mac skal du åbne det program der hedder <strong>Terminal</strong>. Mens på Windows skal du åbne <strong>Command Prompt</strong>. Du får nu en sort boks op på din skærm, med en markør der blinker, der viser at den er klar til at modtage tekst. Det eneste vi skal gøre nu er at, skrive <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span></code> efterfulgt at navnet på det bibliotek du gerne vil installere.</p>
+<p>I løbet af bogen kommer vi f.eks. til at benytte biblioteket <code class="docutils literal notranslate"><span class="pre">sympy</span></code> en del. Så hvis vi skriver <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">sympy</span></code>, så vil Anaconda automatisk installere <code class="docutils literal notranslate"><span class="pre">sympy</span></code> og gøre det klart til brug.</p>
+<p>Det var sådan set det hele.</p>
+</div>
 </div>
 
 
@@ -190,8 +217,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="forord.html" title="previous page">Forord</a>
-    <a class='right-next' id="next-link" href="basal-jupyter.html" title="next page">Hvad er Jupyter Notebooks?</a>
+    <a class='left-prev' id="prev-link" href="basal-python.html" title="previous page">Hvorfor Python?</a>
+    <a class='right-next' id="next-link" href="basal-matematik.html" title="next page">Basal Matematik</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
