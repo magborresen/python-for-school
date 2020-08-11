@@ -26,19 +26,29 @@ Inden vi begynder, vil jeg til sidst sige at formålet med dette er, at skabe en 
 :titlesonly:
 :caption: Kom Igang
 
-installation
 basal-jupyter
 basal-python
+installation
 ```
 
 
 ```{toctree}
 :hidden:
 :titlesonly:
-:caption: Matematik med Python
+:caption: Folkeskole Niveau
 
 basal-matematik
-trigonometri
+geometri
 ligninger
 funktioner
+```
+
+
+```{toctree}
+:hidden:
+:titlesonly:
+:caption: Gymnasie Niveau
+
+funktioner-gym
+trigonometri
 ```

@@ -20,13 +20,18 @@ Python kan ud af boksen, finde ud af en masse ting selv. Dette inkludere basale 
 # Eksponent
 4**5
 
-I Python kan man desuden benytte det der kaldes for sammenlignelses operatorer. Disse vil ikke vise et tal, men en udtalelse om situation er sandt eller falsk.
+I Python kan man desuden benytte det der kaldes for sammenlignelses operatorer. Disse vil ikke vise et tal, men en udtalelse om situation er sandt eller falsk. 
+
+Disse operatorer kan bl.a. være nyttige når der skal laves brøkregning for at tjekke om den ene brøk er større end den anden.
 
 # Er 3 større end 4?
 3 > 4
 
 # Er 2 mindre end 4?
 2 < 4
+
+# Med brøker
+2/4 < 7/10
 
 # Er 4 lig med 4?
 4 == 4
@@ -39,7 +44,9 @@ I Python kan man desuden benytte det der kaldes for sammenlignelses operatorer. 
 
 Disse er nok mere anvendelige i generel programmering, end de er i matematik. Men ikke desto mindre, er de gode at kende til.
 
-Hvis man har brug for mere "avancerede" funktioner, skal man benytte sig af det indbyggede matematik bibliotek i Python. For at benytte dette, skal man importere det. Importering er nemt og man kan enten importere hele eller dele af biblioteket. Importering foregår således:
+## Mere funktionalitet
+
+Hvis man har brug for mere "avancerede" funktioner, kan man benytte sig af det indbyggede matematik bibliotek i Python. For at benytte dette, skal man importere det. Importering er nemt og man kan enten importere hele eller dele af biblioteket. Importering foregår således:
 
 import math
 
@@ -66,4 +73,4 @@ math.log(2, 5)
 # Naturlig logaritme til basen 10, er normalt mere præcis ved at bruge
 math.log10(2)
 
-Dette er de mest basale former for funktioner af matematik i Python. Men man kan selvfølgelig meget mere end det. Derfor vil jeg nu gennemgå forskellige matematiske koncepter og vise hvordan man kan løse udfordringerne i Python.
+Dette er de mest basale former for funktioner af matematik i Python. Men man kan selvfølgelig meget mere end det. I de næste kapitler af bogen vil forskellige biblioteker blive benyttet til at løse matematiske opgaver. 

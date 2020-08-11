@@ -22,3 +22,38 @@ detHerErEnVariabel = 15
 # Vi kan efterfølgende skrive ud hvad vores variabel indeholder
 print (detHerErEnVariabel)
 
+Det smarte ved variable er også, at de gør det muligt at have flere outputs pr. celle i ens notebooks. Vi kan lave to variable og få dem begge ud som output fra samme celle.
+
+# Her deklarere vi vores variabel
+detHerErEnVariabel = 15
+detHerErEnNyVariabel = 17
+
+# Vi kan efterfølgende skrive ud hvad vores variabel indeholder
+print (detHerErEnVariabel)
+print (detHerErEnNyVariabel)
+
+`print` funktionen gør det også muligt at print almindeligt tekst, med eller uden sin variabel. Det kræver bare at man sætter enten `""` eller `''` rundt om sin tekst inde i parentesen.
+
+print("Det her er bare tekst")
+
+## Konvertering af typer
+
+Vi kan også gøre det sammen med variable.
+
+print("Det her er vores variable " + str(detHerErEnVariabel))
+
+Som det kan ses i eksemplet ovenfor, så er det muligt at lægge et tal og et stykke tekst sammen. Det er det fordi vi bruger funktionen `str()`. Denne funktion tager et tal ind i parentesen og omdanner det til en tekst streng. 
+
+Det er nødvendigt at gøre det på denne måde da Python ikke kan sætte en tekst streng og et tal sammen. Og det er netop det vi gør med det `+` vi har sat i eksemplet ovenfor. Det betyder basalt set at vi konkatenere to tekst strenge sammen. Hvis vi forsøger at gøre det uden `str` funtionen, så får vi en fejl
+
+print("Det her er vores variable " + detHerErEnVariabel)
+
+Vi ser ved fejlen at Python fortæller os at en tekst streng ikke kan konkateneres sammen med en `int`, hvilket står for __Integer__. Mens `str` står for __String__.
+
+Desuden viser det ovenstående eksempel at det er muligt at benytte variable som er blevet defineret i tidligere celler. Alle variable som bliver defineret i en Notebook er tilgængelige igennem alle celler i hele den Notebook. Eller, det er ikke helt rigtigt, for variablen er kun tilgængelig i celler efter den er blevet defineret. 
+
+Man kan altid finde ud af hvilken type af variable man arbejder med, ved at bruge funktionen `type()` og indtaste sin variable i parentesen, som set nedenfor.
+
+type(detHerErEnVariabel)
+
+`detHerErEnVariabel` er typen __Integer__, altså et heltal. Hvilket vi også havde regnet med. Vi kan også regne med decimaltal, i computerens verden er det dog en helt anden mundfuld. Derfor kaldes decimaltal ikke for __Integers__, men istedet for __Float__.
