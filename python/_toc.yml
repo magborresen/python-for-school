@@ -1,8 +1,8 @@
 - file: forord
 
 - header: Kom Igang
-- file: basal-jupyter
 - file: basal-python
+- file: basal-jupyter
 - file: installation
 
 - header: Folkeskole Niveau
