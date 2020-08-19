@@ -2,6 +2,10 @@
 
 - header: Kom Igang
 - file: basal-python
+    sections:
+    - file: variabel-python
+    - file: typer-python
+    - file: datastrukturer-python
 - file: basal-jupyter
 - file: installation
 
