@@ -31,7 +31,7 @@
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Funktioner (Gymnasie Niveau)" href="funktioner-gym.html" />
+    <link rel="next" title="Funktioner" href="funktioner-gym.html" />
     <link rel="prev" title="Ligninger" href="ligninger.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -74,10 +74,10 @@
 <p class="margin-caption">Kom Igang</p>
 </li>
   <li class="">
-    <a href="basal-jupyter.html">Hvad er Jupyter Notebooks?</a>
+    <a href="basal-python.html">Start her</a>
   </li>
   <li class="">
-    <a href="basal-python.html">Hvorfor Python?</a>
+    <a href="basal-jupyter.html">Hvad er Jupyter Notebooks?</a>
   </li>
   <li class="">
     <a href="installation.html">Installation</a>
@@ -101,7 +101,7 @@
 <p class="margin-caption">Gymnasie Niveau</p>
 </li>
   <li class="">
-    <a href="funktioner-gym.html">Funktioner (Gymnasie Niveau)</a>
+    <a href="funktioner-gym.html">Funktioner</a>
   </li>
   <li class="">
     <a href="trigonometri.html">Trigonometri</a>
@@ -194,14 +194,7 @@
         
               <div>
                 
-  <div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="funktioner">
+  <div class="section" id="funktioner">
 <h1>Funktioner<a class="headerlink" href="#funktioner" title="Permalink to this headline">¶</a></h1>
 <p>En af de vigtigste aspekter i matematikken er funktioner. Så det er uden tvivl vigtigt at vores værktøjer kan finde ud af at arbejde med funktion. Det kan vores yndlingsværktøj <code class="docutils literal notranslate"><span class="pre">sympy</span></code> heldigvis langt hen ad vejen. Jeg vil undlade at gennemgå formler for forskellige funktioner, for det er ikke det der er meningen med denne note. Jeg vil i stedet gå igennem hvilke værktøjer <code class="docutils literal notranslate"><span class="pre">sympy</span></code> giver os til at arbejde med funktioner og hvordan de bruges.</p>
 <div class="section" id="haeldningskoefficienter">
@@ -263,8 +256,10 @@ Det har <code class="docutils literal notranslate"><span class="pre">sympy</span
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/funktioner_13_0.png" src="_images/funktioner_13_0.png" />
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0xac727d0&gt;
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 1 Axes&gt;
+</pre></div>
+</div>
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x6b610b0&gt;
 </pre></div>
 </div>
 </div>
@@ -277,12 +272,28 @@ Det har <code class="docutils literal notranslate"><span class="pre">sympy</span
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/funktioner_15_0.png" src="_images/funktioner_15_0.png" />
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0xc17a3f0&gt;
+<img alt="_images/funktioner_14_0.png" src="_images/funktioner_14_0.png" />
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0xc518410&gt;
 </pre></div>
 </div>
 </div>
 </div>
+<p>Vi kan også plotte inden for et bestemt område. F.eks. kan man se at i eksemplerne ovenfor, plottes x-aksen fra -10.0 til 10.0. Vi kan gøre aksen større eller mindre ved at specificere intervallet når vi kalder funktionen. Lad os prøve at plotte <span class="math notranslate nohighlight">\(x^2\)</span> igen, men denne gang kun i intervallet -5.0 til 5.0</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/funktioner_16_0.png" src="_images/funktioner_16_0.png" />
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0xc5a8ab0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vi skal altså blot indsætte en parentes i stedet for kun at definere at det er variablen <code class="docutils literal notranslate"><span class="pre">x</span></code> vi vil plotte. For at gøre det helt klart, så hvis vi blot vil plotte <span class="math notranslate nohighlight">\(x^2\)</span> og lade <code class="docutils literal notranslate"><span class="pre">sympy</span></code> tage sig af akse-værdierne, så skriver vi blot <code class="docutils literal notranslate"><span class="pre">plot(x**2)</span></code>. Men hvis vi vil styre akse-værdierne på x-aksen, så skriver vi altså <code class="docutils literal notranslate"><span class="pre">plot(x**2,</span> <span class="pre">(x,</span> <span class="pre">-5,</span> <span class="pre">5))</span></code>.</p>
+<p>Vi kan også godt styrer akse-værdierne for y-aksen og vi kan også gøre x-aksen så lang vi ønsker. Men det vil jeg gennemgå Funktioner for Gymnasier, da jeg ikke mener det er relavent for folkeskole elever.</p>
 </div>
 </div>
 
@@ -296,7 +307,7 @@ Det har <code class="docutils literal notranslate"><span class="pre">sympy</span
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="ligninger.html" title="previous page">Ligninger</a>
-    <a class='right-next' id="next-link" href="funktioner-gym.html" title="next page">Funktioner (Gymnasie Niveau)</a>
+    <a class='right-next' id="next-link" href="funktioner-gym.html" title="next page">Funktioner</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

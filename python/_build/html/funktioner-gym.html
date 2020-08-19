@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Funktioner (Gymnasie Niveau) &#8212; Matematik med Python</title>
+    <title>Funktioner &#8212; Matematik med Python</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -74,10 +74,10 @@
 <p class="margin-caption">Kom Igang</p>
 </li>
   <li class="">
-    <a href="basal-jupyter.html">Hvad er Jupyter Notebooks?</a>
+    <a href="basal-python.html">Start her</a>
   </li>
   <li class="">
-    <a href="basal-python.html">Hvorfor Python?</a>
+    <a href="basal-jupyter.html">Hvad er Jupyter Notebooks?</a>
   </li>
   <li class="">
     <a href="installation.html">Installation</a>
@@ -101,7 +101,7 @@
 <p class="margin-caption">Gymnasie Niveau</p>
 </li>
   <li class="active">
-    <a href="">Funktioner (Gymnasie Niveau)</a>
+    <a href="">Funktioner</a>
   </li>
   <li class="">
     <a href="trigonometri.html">Trigonometri</a>
@@ -194,9 +194,63 @@
         
               <div>
                 
-  <div class="section" id="funktioner-gymnasie-niveau">
-<h1>Funktioner (Gymnasie Niveau)<a class="headerlink" href="#funktioner-gymnasie-niveau" title="Permalink to this headline">¶</a></h1>
-<p>Da vi tidligere har gennemgået matematikken for folkeskole niveau, kommer vi nu til det lidt mere dybdegående. Det er muligvis også her at Python virkelig kommer til en ret som et CAS værktøj til at kunne hjælpe eleverne. Husk at måden hvorpå funktioner kan plottes er beskrevet på siden for Funktioner på folkeskoleniveau.</p>
+  <div class="section" id="funktioner">
+<h1>Funktioner<a class="headerlink" href="#funktioner" title="Permalink to this headline">¶</a></h1>
+<p>Da vi tidligere har gennemgået matematikken for folkeskole niveau, kommer vi nu til det lidt mere dybdegående. Det er muligvis også her at Python virkelig kommer til en ret som et CAS værktøj til at kunne hjælpe eleverne. Husk at måden hvorpå funktioner kan plottes er beskrevet mere i dybden på siden omkring Funktioner på Folkeskoleniveau. Men for en god ordens skyld, kan vi lige tage en hurtigt opfrisker her.</p>
+<p>Vi bruger som sædvanligt <code class="docutils literal notranslate"><span class="pre">sympy</span></code> til at illustrere vores funktioner. Der findes også andre biblioteker, men <code class="docutils literal notranslate"><span class="pre">sympy</span></code>’s CAS funktionalitet, gør det nemt og bekvemt at arbejde med. Så for at kunne benytte plot funktionen fra <code class="docutils literal notranslate"><span class="pre">sympy</span></code> skal vi altså have importeret det.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="n">plot</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nu har vi altså importeret <code class="docutils literal notranslate"><span class="pre">plot</span></code> funktionen fra <code class="docutils literal notranslate"><span class="pre">sympy</span></code>, så nu skal vi bruge en variabel som <code class="docutils literal notranslate"><span class="pre">sympy</span></code> kan lave CAS udregninger med. Til dette bruger vi ofte variablen <code class="docutils literal notranslate"><span class="pre">x</span></code>. Det er dog ikke en helt almindelig variabel, for det er en special type som vi importere fra <code class="docutils literal notranslate"><span class="pre">sympy</span></code>. Det gør vi som vist nedenfor.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="k">import</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Det er ikke kun <code class="docutils literal notranslate"><span class="pre">x</span></code> vi kan importere, men hvilken som helt bogstav vi har lyst til at bruge. Når vi skal plotte en funktion gør vi som vist nedenfor.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 1 Axes&gt;
+</pre></div>
+</div>
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7b0af10&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hvis vi gemmer en funktion i en Python variabel, kan vi også plotte den ved blot at bruge variabel navnet. F.eks. kan vi prøve at gemme funktionen <code class="docutils literal notranslate"><span class="pre">x**3</span></code> i en variabel ved navn <code class="docutils literal notranslate"><span class="pre">funktion</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">funktion</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nu kan vi så blot sige <code class="docutils literal notranslate"><span class="pre">plot(funktion)</span></code> for at få vist resultatet</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">funktion</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/funktioner-gym_10_0.png" src="_images/funktioner-gym_10_0.png" />
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0xd0b45d0&gt;
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="differentiering">
 <h2>Differentiering<a class="headerlink" href="#differentiering" title="Permalink to this headline">¶</a></h2>
 <p>Det er selvfølgelig vigtigt at vores CAS værktøj kan finde ud af at differentiere funktioner. Det er jo en stor del af matematikken, og heldigvis kan vi prise os lykkelige med, at det ikke er noget problem for <code class="docutils literal notranslate"><span class="pre">sympy</span></code>. Vi skal, som altid, blot importere funktionaliteten først. Den funktion vi skal importere hedder <code class="docutils literal notranslate"><span class="pre">diff()</span></code>. Før vi kan gøre det skal vi dog altid lige huske at importere vores variable ind med også. Vi vil bruge variabel navnet <code class="docutils literal notranslate"><span class="pre">x</span></code> i det her tilfælde.</p>

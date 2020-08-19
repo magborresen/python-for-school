@@ -1,6 +1,26 @@
-# Funktioner (Gymnasie Niveau)
+# Funktioner
 
-Da vi tidligere har gennemgået matematikken for folkeskole niveau, kommer vi nu til det lidt mere dybdegående. Det er muligvis også her at Python virkelig kommer til en ret som et CAS værktøj til at kunne hjælpe eleverne. Husk at måden hvorpå funktioner kan plottes er beskrevet på siden for Funktioner på folkeskoleniveau.
+Da vi tidligere har gennemgået matematikken for folkeskole niveau, kommer vi nu til det lidt mere dybdegående. Det er muligvis også her at Python virkelig kommer til en ret som et CAS værktøj til at kunne hjælpe eleverne. Husk at måden hvorpå funktioner kan plottes er beskrevet mere i dybden på siden omkring Funktioner på Folkeskoleniveau. Men for en god ordens skyld, kan vi lige tage en hurtigt opfrisker her.
+
+Vi bruger som sædvanligt `sympy` til at illustrere vores funktioner. Der findes også andre biblioteker, men `sympy`'s CAS funktionalitet, gør det nemt og bekvemt at arbejde med. Så for at kunne benytte plot funktionen fra `sympy` skal vi altså have importeret det.
+
+from sympy import plot
+
+Nu har vi altså importeret `plot` funktionen fra `sympy`, så nu skal vi bruge en variabel som `sympy` kan lave CAS udregninger med. Til dette bruger vi ofte variablen `x`. Det er dog ikke en helt almindelig variabel, for det er en special type som vi importere fra `sympy`. Det gør vi som vist nedenfor. 
+
+from sympy.abc import x
+
+Det er ikke kun `x` vi kan importere, men hvilken som helt bogstav vi har lyst til at bruge. Når vi skal plotte en funktion gør vi som vist nedenfor.
+
+plot(x**2)
+
+Hvis vi gemmer en funktion i en Python variabel, kan vi også plotte den ved blot at bruge variabel navnet. F.eks. kan vi prøve at gemme funktionen `x**3` i en variabel ved navn `funktion`.
+
+funktion = x**3
+
+Nu kan vi så blot sige `plot(funktion)` for at få vist resultatet
+
+plot(funktion)
 
 ### Differentiering
 

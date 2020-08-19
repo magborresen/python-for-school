@@ -1,5 +1,3 @@
-%matplotlib inline
-
 ## Funktioner
 
 En af de vigtigste aspekter i matematikken er funktioner. Så det er uden tvivl vigtigt at vores værktøjer kan finde ud af at arbejde med funktion. Det kan vores yndlingsværktøj `sympy` heldigvis langt hen ad vejen. Jeg vil undlade at gennemgå formler for forskellige funktioner, for det er ikke det der er meningen med denne note. Jeg vil i stedet gå igennem hvilke værktøjer `sympy` giver os til at arbejde med funktioner og hvordan de bruges.
@@ -42,3 +40,12 @@ plot(x**2)
 Det er også muligt at tegne flere funktioner ind i ét koordinatsystem. Det gør man ved at 
 
 plot(x**2, x)
+
+Vi kan også plotte inden for et bestemt område. F.eks. kan man se at i eksemplerne ovenfor, plottes x-aksen fra -10.0 til 10.0. Vi kan gøre aksen større eller mindre ved at specificere intervallet når vi kalder funktionen. Lad os prøve at plotte $x^2$ igen, men denne gang kun i intervallet -5.0 til 5.0
+
+plot(x**2, (x, -5, 5))
+
+Vi skal altså blot indsætte en parentes i stedet for kun at definere at det er variablen `x` vi vil plotte. For at gøre det helt klart, så hvis vi blot vil plotte $x^2$ og lade `sympy` tage sig af akse-værdierne, så skriver vi blot `plot(x**2)`. Men hvis vi vil styre akse-værdierne på x-aksen, så skriver vi altså `plot(x**2, (x, -5, 5))`.
+
+Vi kan også godt styrer akse-værdierne for y-aksen og vi kan også gøre x-aksen så lang vi ønsker. Men det vil jeg gennemgå Funktioner for Gymnasier, da jeg ikke mener det er relavent for folkeskole elever. 
+

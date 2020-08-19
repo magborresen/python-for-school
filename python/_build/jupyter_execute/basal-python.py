@@ -1,4 +1,12 @@
-# Hvorfor Python?
+# Start her
+
+Måske har du tæsket dig igennem mine forord og ved derfor allerede hvorfor jeg synes at Python i folkeskolen og gymnasiet er en god idé. Men hvis ikke, eller hvis du bare har lyst til at hører lidt mere omrking hvorfor jeg synes Python er så fedt. Så læs med her.
+
+Python er det vi kalder for en __General Purpose Programming Language__. Altså kort fortalt, et programmeringssprog som har mange anvendelser. I Pythons tilfælde er det dog bare utroligt mange anvendelser. Og der kommer flere dag for dag.
+
+Ikke nok med at vi kan bruge Python til at hjælpe os med matematikken i form af CAS. Jamen så kan vi faktisk også bygge hele webplatforme (hjemmesider og applikationer i webbrowseren) i Python. Instagram's hjemmeside er f.eks. bygget ved hjælp af Python biblioteket `Django`. Vi kan også bruge Python til at lave programmer på vores computer. Jeg skal senere vise hvordan vi kan benytte biblioteket `tkinter` til at lave en simpel lommeregner med en grafisk interface. Derudover kan Python også benyttes til noget lidt mere håndgribeligt. `circuit Python` er begyndt at vende indtog blandt nybegyndere og hobby folk til at programmere mikrokontrollere i elektriske kredsløb såsom Arduino. Det gør barrieren for at komme igang væsenligt mindre, da man ikke længere er nødsaget til at lære `C`.
+
+## Det er meget fint, men hvad så nu?
 
 Hvis man sidder på en Mac eller Linux computer vil Python allerede være præinstalleret. Hvis man sidder på en Windows computer derimod, skal Python installeres. Jeg vedhæfter et link til en guide for installation.
 
@@ -35,6 +43,25 @@ print (detHerErEnNyVariabel)
 `print` funktionen gør det også muligt at print almindeligt tekst, med eller uden sin variabel. Det kræver bare at man sætter enten `""` eller `''` rundt om sin tekst inde i parentesen.
 
 print("Det her er bare tekst")
+
+## Typer i Python
+
+Som i alle andre programmeringssprog så findes der nogle forskellige typer som et stykke data (som regel en variabel) kan have. Der er ikke så mange typer at holde styr på, i hvert fald ikke i basis syntaxen. Jeg har forsøgt at give et kort overblik over dem her.
+
+* Int
+    * Int er en forkortelse for Integer, hvilket i programmeringsverdenen betyder et hel tal. En Integer type kan være et heltal der både er positivt og negativt. Men det kan __ikke__ være et decimal tal.
+
+* Float
+    * Float er en forkortelse for floating point number, hvilket i programmeringsverdenen betyder et decimal tal. Tallet kan både være positivt og negativt
+    
+* Str
+    * Str er en forkortelse for string, hvilket i programmeringsverdenen blot er en tekst streng.
+    
+* Bool
+    * Bool er en forkortelse for boolean. Boolsk logik er utroligt meget brugt inden for programmeringsverdenen. Det er altså en værdi som enten kan være sand eller falsk.
+    
+* Andre typer
+    * Der findes masser af andre typer i Python og man vil hurtigt opdage at hvert bibliotek man importere, også henter nye typer med sig. De ovenstående typer er de mest basale i Python og dem der er vigtigst and kende.
 
 ## Konvertering af typer
 
