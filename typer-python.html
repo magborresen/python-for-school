@@ -1,0 +1,387 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Typer i Python &#8212; Matematik med Python</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/togglebutton.js"></script>
+    <script type="text/javascript" src="_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <script type="text/javascript" src="_static/mystnb.js"></script>
+    <script type="text/javascript" src="_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Datastrukturer i Python" href="datastrukturer-python.html" />
+    <link rel="prev" title="Variabler i Python" href="variabel-python.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Matematik med Python</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="forord.html">Forord</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Kom Igang</p>
+</li>
+  <li class="active">
+    <a href="basal-python.html">Start her</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="variabel-python.html">Variabler i Python</a>
+    </li>
+    <li class="active">
+      <a href="">Typer i Python</a>
+    </li>
+    <li class="">
+      <a href="datastrukturer-python.html">Datastrukturer i Python</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="basal-jupyter.html">Hvad er Jupyter Notebooks?</a>
+  </li>
+  <li class="">
+    <a href="installation.html">Installation</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Folkeskole Niveau</p>
+</li>
+  <li class="">
+    <a href="basal-matematik.html">Basal Matematik</a>
+  </li>
+  <li class="">
+    <a href="geometri.html">Geometri</a>
+  </li>
+  <li class="">
+    <a href="ligninger.html">Ligninger</a>
+  </li>
+  <li class="">
+    <a href="funktioner.html">Funktioner</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Gymnasie Niveau</p>
+</li>
+  <li class="">
+    <a href="funktioner-gym.html">Funktioner</a>
+  </li>
+  <li class="">
+    <a href="trigonometri.html">Trigonometri</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/typer-python.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#konvertering-af-typer" class="nav-link">Konvertering af typer</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#ekstra-for-sjov" class="nav-link">Ekstra for sjov</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="typer-i-python">
+<h1>Typer i Python<a class="headerlink" href="#typer-i-python" title="Permalink to this headline">¶</a></h1>
+<p>Som i alle andre programmeringssprog så findes der nogle forskellige typer som et stykke data (som regel en variabel) kan have. Der er ikke så mange typer at holde styr på, i hvert fald ikke i basis syntaxen. Jeg har forsøgt at give et kort overblik over dem her.</p>
+<ul class="simple">
+<li><p>Int</p>
+<ul>
+<li><p>Int er en forkortelse for Integer, hvilket i programmeringsverdenen betyder et hel tal. En Integer type kan være et heltal der både er positivt og negativt. Men det kan <strong>ikke</strong> være et decimal tal.</p></li>
+</ul>
+</li>
+<li><p>Float</p>
+<ul>
+<li><p>Float er en forkortelse for floating point number, hvilket i programmeringsverdenen betyder et decimal tal. Tallet kan både være positivt og negativt</p></li>
+</ul>
+</li>
+<li><p>Str</p>
+<ul>
+<li><p>Str er en forkortelse for string, hvilket i programmeringsverdenen blot er en tekst streng.</p></li>
+</ul>
+</li>
+<li><p>Bool</p>
+<ul>
+<li><p>Bool er en forkortelse for boolean. Boolsk logik er utroligt meget brugt inden for programmeringsverdenen. Det er altså en værdi som enten kan være sand eller falsk.</p></li>
+</ul>
+</li>
+<li><p>Andre typer</p>
+<ul>
+<li><p>Der findes masser af andre typer i Python og man vil hurtigt opdage at hvert bibliotek man importere, også henter nye typer med sig. De ovenstående typer er de mest basale i Python og dem der er vigtigst and kende.</p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="konvertering-af-typer">
+<h2>Konvertering af typer<a class="headerlink" href="#konvertering-af-typer" title="Permalink to this headline">¶</a></h2>
+<p>Vi kan også gøre det sammen med variable. Vi definere igen <code class="docutils literal notranslate"><span class="pre">detHerErEnVariabel=15</span></code> ligesom i sidste afsnit.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">detHerErEnVariabel</span> <span class="o">=</span> <span class="mi">15</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Det her er vores variable &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">detHerErEnVariabel</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Det her er vores variable 15
+</pre></div>
+</div>
+</div>
+</div>
+<p>Det er nødvendigt at gøre det på denne måde da Python ikke kan sætte en tekst streng og et tal sammen. Og det er netop det vi gør med det <code class="docutils literal notranslate"><span class="pre">+</span></code> vi har sat i eksemplet ovenfor. Det betyder basalt set at vi konkatenere to tekst strenge sammen. Hvis vi forsøger at gøre det uden <code class="docutils literal notranslate"><span class="pre">str</span></code> funtionen, så får vi en fejl</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Det her er vores variable &quot;</span> <span class="o">+</span> <span class="n">detHerErEnVariabel</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">b49371dd1c82</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Det her er vores variable &quot;</span> <span class="o">+</span> <span class="n">detHerErEnVariabel</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: can only concatenate str (not &quot;int&quot;) to str
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vi ser ved fejlen at Python fortæller os at en tekst streng ikke kan konkateneres sammen med en <code class="docutils literal notranslate"><span class="pre">int</span></code>, hvilket står for <strong>Integer</strong>. Mens <code class="docutils literal notranslate"><span class="pre">str</span></code> står for <strong>String</strong>.</p>
+<p>Desuden viser det ovenstående eksempel at det er muligt at benytte variable som er blevet defineret i tidligere celler. Alle variable som bliver defineret i en Notebook er tilgængelige igennem alle celler i hele den Notebook. Eller, det er ikke helt rigtigt, for variablen er kun tilgængelig i celler efter den er blevet defineret.</p>
+<p>Man kan altid finde ud af hvilken type af variable man arbejder med, ved at bruge funktionen <code class="docutils literal notranslate"><span class="pre">type()</span></code> og indtaste sin variable i parentesen, som set nedenfor.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">detHerErEnVariabel</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>int
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">detHerErEnVariabel</span></code> er typen <strong>Integer</strong>, altså et heltal. Hvilket vi også havde regnet med. Vi kan også regne med decimaltal, i computerens verden er det dog en helt anden mundfuld. Derfor kaldes decimaltal ikke for <strong>Integers</strong>, men istedet for <strong>Float</strong>.</p>
+<p>Kan vi så også konvertere en <code class="docutils literal notranslate"><span class="pre">int</span></code> til en <code class="docutils literal notranslate"><span class="pre">str</span></code>? Ja, selvfølgelig kan vi det. Hvis du tænker dig lidt om, har du nok også allerede svaret på hvordan vi kan gøre det.</p>
+<p>Lad os sige at vi har følgende tekststreng</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tal</span> <span class="o">=</span> <span class="s2">&quot;1000&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>For det blotte øje ligner det at der bare står tallet 1000. Det gør der sådan set også, men det er af typen <code class="docutils literal notranslate"><span class="pre">string</span></code> fordi vi har puttet to gåseøjne omkring. Så hvis vi forsøger at ligge <code class="docutils literal notranslate"><span class="pre">tal</span></code> sammen med et andet tilfældigt tal, som er defineret som en <code class="docutils literal notranslate"><span class="pre">int</span></code>, så får vi</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tal2</span> <span class="o">=</span> <span class="mi">1000</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">tal</span> <span class="o">+</span> <span class="n">tal2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="n">c103a0711819</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">tal2</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="k">print</span><span class="p">(</span><span class="n">tal</span> <span class="o">+</span> <span class="n">tal2</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: can only concatenate str (not &quot;int&quot;) to str
+</pre></div>
+</div>
+</div>
+</div>
+<p>Python tror altså vi forsøger at lave det der hedder <strong>String konkatenering</strong>. Hvor man simpelthen ligger to <code class="docutils literal notranslate"><span class="pre">str</span></code> typer sammen. Men det er jo ikke det vi vil. Derfor skal vi først konveretere <code class="docutils literal notranslate"><span class="pre">tal</span></code> variablen til en <code class="docutils literal notranslate"><span class="pre">int</span></code> type. Det gør vi ved</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">tal</span><span class="p">)</span> <span class="o">+</span> <span class="n">tal2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>2000
+</pre></div>
+</div>
+</div>
+</div>
+<p>Så får vi det rigtige resultat!</p>
+</div>
+<div class="section" id="ekstra-for-sjov">
+<h2>Ekstra for sjov<a class="headerlink" href="#ekstra-for-sjov" title="Permalink to this headline">¶</a></h2>
+<p>Det næste her er ikke nødvendig læsning for at kunne benytte Python til matematiske formål. Men jeg synes at det er rart nok lige at komme ind på hvad <strong>String konkatenering</strong> egentlig er, nu hvor jeg nævnte det.</p>
+<p>Det foregår ved at man kan ligge to <code class="docutils literal notranslate"><span class="pre">str</span></code> typer sammen. Det vil sige at hvis vi konvertere <code class="docutils literal notranslate"><span class="pre">tal2</span></code> til en <code class="docutils literal notranslate"><span class="pre">str</span></code> i stedet for at konvertere <code class="docutils literal notranslate"><span class="pre">tal</span></code> til en <code class="docutils literal notranslate"><span class="pre">int</span></code>, så kan vi stadig ligge dem sammen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">tal</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tal2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>10001000
+</pre></div>
+</div>
+</div>
+</div>
+<p>Som vi kan se, betyder konkatenering blot at vi lægger den ene tekststreng lige bagved den anden.</p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="variabel-python.html" title="previous page">Variabler i Python</a>
+    <a class='right-next' id="next-link" href="datastrukturer-python.html" title="next page">Datastrukturer i Python</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Magnus Borresen<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>
