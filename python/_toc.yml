@@ -2,7 +2,7 @@
 
 - header: Kom Igang
 - file: basal-python
-    sections:
+  sections: 
     - file: variabel-python
     - file: typer-python
     - file: datastrukturer-python

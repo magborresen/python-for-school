@@ -15,3 +15,14 @@ Der findes 2 versioner af Python. Python 2 og Python 3. I denne notesbog, vil de
 For at kunne udarbejder matematik afleveringer og prøver med Python, foreslår jeg at installere Jupyter Notebooks. Dette gøres ved hjælp af Python indbyggede pakke distrubtionssystem kaldet pip. Jeg vedhæfter en guide til hvordan Jupyter Notebooks installeres, samt hvordan man bruger pip generelt. Når Python er installeret kræver pip ingen ekstra opsætning, og man vil kunne bruge funktionaliteten med det samme. pip sørger for at installere pakker automatisk og korrekt.
 
 Når Python, pip og Jupyter Notebooks er blevet sat op, kan vi begynde.
+
+
+```{toctree}
+:hidden:
+:titlesonly:
+
+
+variabel-python
+typer-python
+datastrukturer-python
+```

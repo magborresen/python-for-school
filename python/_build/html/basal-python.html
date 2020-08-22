@@ -31,7 +31,7 @@
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Hvad er Jupyter Notebooks?" href="basal-jupyter.html" />
+    <link rel="next" title="Variabler i Python" href="variabel-python.html" />
     <link rel="prev" title="Forord" href="forord.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -75,6 +75,17 @@
 </li>
   <li class="active">
     <a href="">Start her</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="variabel-python.html">Variabler i Python</a>
+    </li>
+    <li class="">
+      <a href="typer-python.html">Typer i Python</a>
+    </li>
+    <li class="">
+      <a href="datastrukturer-python.html">Datastrukturer i Python</a>
+    </li>
+  </ul>
   </li>
   <li class="">
     <a href="basal-jupyter.html">Hvad er Jupyter Notebooks?</a>
@@ -179,18 +190,6 @@
             <a href="#det-er-meget-fint-men-hvad-sa-nu" class="nav-link">Det er meget fint, men hvad så nu?</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#hvad-er-en-variabel" class="nav-link">Hvad er en variabel?</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#typer-i-python" class="nav-link">Typer i Python</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#konvertering-af-typer" class="nav-link">Konvertering af typer</a>
-        </li>
-    
     </ul>
 </nav>
 
@@ -213,143 +212,8 @@
 <p>Der findes 2 versioner af Python. Python 2 og Python 3. I denne notesbog, vil der dog blive brugt Python 3, da Python 2 ikke længere vil være supporteret fra udviklerne i 2020.</p>
 <p>For at kunne udarbejder matematik afleveringer og prøver med Python, foreslår jeg at installere Jupyter Notebooks. Dette gøres ved hjælp af Python indbyggede pakke distrubtionssystem kaldet pip. Jeg vedhæfter en guide til hvordan Jupyter Notebooks installeres, samt hvordan man bruger pip generelt. Når Python er installeret kræver pip ingen ekstra opsætning, og man vil kunne bruge funktionaliteten med det samme. pip sørger for at installere pakker automatisk og korrekt.</p>
 <p>Når Python, pip og Jupyter Notebooks er blevet sat op, kan vi begynde.</p>
+<div class="toctree-wrapper compound">
 </div>
-<div class="section" id="hvad-er-en-variabel">
-<h2>Hvad er en variabel?<a class="headerlink" href="#hvad-er-en-variabel" title="Permalink to this headline">¶</a></h2>
-<p>En variabel i Python bliver brugt til at gemme værdier i. Det vil sige at det altså ikke fungere som i matematik hvor man f.eks. har en ukendt variabel. For at kunne bruge en variabel, skal den først deklareres. Det betyder i alt sin enkelthed bare at man fortæller Python f.eks. at <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">3</span></code>. Hermed vil variablen <code class="docutils literal notranslate"><span class="pre">x</span></code> nu indeholde værdien <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p>
-<p>Det er vigtigt at forstå hvad variabler er i Python da de er smarte at arbejde med i forhold til alt i matematik. Det er heldigvis ikke så besværligt. Variabler behøver heller ikke kun hedde enkelte bogstaver. Det vil sige at en variabel godt kan hedde <code class="docutils literal notranslate"><span class="pre">detHerErEnVariabel</span></code>. Generelt ser man bare gerne at man enten benytter sig af det der hedder <em>camelCase</em> eller underscore <code class="docutils literal notranslate"><span class="pre">_</span></code>. Det skyldes at der ikke må være mellemrum i variabelnavne. <em>camelCase</em> fungere ved at man har et variabelnavn der består af flere ord. Her skriver man det første ord med småt, i de efterfølgende ord skriver man det første bogstav med stort. Det tidligere eksempel på et variabel navn er for eksempel i <em>camelCase</em>. Det nemmeste er dog nok bare at sætte et underscore <code class="docutils literal notranslate"><span class="pre">_</span></code> mellem hvert ord.</p>
-<p>Jeg vil igennem denne guide bruge variabler, så kig med og se om brikkerne ikke hurtigt falder på plads. Nedenfor kan du se et eksempel på brug af en variabel.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Her deklarere vi vores variabel</span>
-<span class="n">detHerErEnVariabel</span> <span class="o">=</span> <span class="mi">15</span>
-
-<span class="c1"># Vi kan efterfølgende skrive ud hvad vores variabel indeholder</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">detHerErEnVariabel</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>15
-</pre></div>
-</div>
-</div>
-</div>
-<p>Det smarte ved variable er også, at de gør det muligt at have flere outputs pr. celle i ens notebooks. Vi kan lave to variable og få dem begge ud som output fra samme celle.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Her deklarere vi vores variabel</span>
-<span class="n">detHerErEnVariabel</span> <span class="o">=</span> <span class="mi">15</span>
-<span class="n">detHerErEnNyVariabel</span> <span class="o">=</span> <span class="mi">17</span>
-
-<span class="c1"># Vi kan efterfølgende skrive ud hvad vores variabel indeholder</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">detHerErEnVariabel</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">detHerErEnNyVariabel</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>15
-17
-</pre></div>
-</div>
-</div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">print</span></code> funktionen gør det også muligt at print almindeligt tekst, med eller uden sin variabel. Det kræver bare at man sætter enten <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> eller <code class="docutils literal notranslate"><span class="pre">''</span></code> rundt om sin tekst inde i parentesen.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Det her er bare tekst&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Det her er bare tekst
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="typer-i-python">
-<h2>Typer i Python<a class="headerlink" href="#typer-i-python" title="Permalink to this headline">¶</a></h2>
-<p>Som i alle andre programmeringssprog så findes der nogle forskellige typer som et stykke data (som regel en variabel) kan have. Der er ikke så mange typer at holde styr på, i hvert fald ikke i basis syntaxen. Jeg har forsøgt at give et kort overblik over dem her.</p>
-<ul class="simple">
-<li><p>Int</p>
-<ul>
-<li><p>Int er en forkortelse for Integer, hvilket i programmeringsverdenen betyder et hel tal. En Integer type kan være et heltal der både er positivt og negativt. Men det kan <strong>ikke</strong> være et decimal tal.</p></li>
-</ul>
-</li>
-<li><p>Float</p>
-<ul>
-<li><p>Float er en forkortelse for floating point number, hvilket i programmeringsverdenen betyder et decimal tal. Tallet kan både være positivt og negativt</p></li>
-</ul>
-</li>
-<li><p>Str</p>
-<ul>
-<li><p>Str er en forkortelse for string, hvilket i programmeringsverdenen blot er en tekst streng.</p></li>
-</ul>
-</li>
-<li><p>Bool</p>
-<ul>
-<li><p>Bool er en forkortelse for boolean. Boolsk logik er utroligt meget brugt inden for programmeringsverdenen. Det er altså en værdi som enten kan være sand eller falsk.</p></li>
-</ul>
-</li>
-<li><p>Andre typer</p>
-<ul>
-<li><p>Der findes masser af andre typer i Python og man vil hurtigt opdage at hvert bibliotek man importere, også henter nye typer med sig. De ovenstående typer er de mest basale i Python og dem der er vigtigst and kende.</p></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section" id="konvertering-af-typer">
-<h2>Konvertering af typer<a class="headerlink" href="#konvertering-af-typer" title="Permalink to this headline">¶</a></h2>
-<p>Vi kan også gøre det sammen med variable.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Det her er vores variable &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">detHerErEnVariabel</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Det her er vores variable 15
-</pre></div>
-</div>
-</div>
-</div>
-<p>Som det kan ses i eksemplet ovenfor, så er det muligt at lægge et tal og et stykke tekst sammen. Det er det fordi vi bruger funktionen <code class="docutils literal notranslate"><span class="pre">str()</span></code>. Denne funktion tager et tal ind i parentesen og omdanner det til en tekst streng.</p>
-<p>Det er nødvendigt at gøre det på denne måde da Python ikke kan sætte en tekst streng og et tal sammen. Og det er netop det vi gør med det <code class="docutils literal notranslate"><span class="pre">+</span></code> vi har sat i eksemplet ovenfor. Det betyder basalt set at vi konkatenere to tekst strenge sammen. Hvis vi forsøger at gøre det uden <code class="docutils literal notranslate"><span class="pre">str</span></code> funtionen, så får vi en fejl</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Det her er vores variable &quot;</span> <span class="o">+</span> <span class="n">detHerErEnVariabel</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="n">b49371dd1c82</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Det her er vores variable &quot;</span> <span class="o">+</span> <span class="n">detHerErEnVariabel</span><span class="p">)</span>
-
-<span class="ne">TypeError</span>: can only concatenate str (not &quot;int&quot;) to str
-</pre></div>
-</div>
-</div>
-</div>
-<p>Vi ser ved fejlen at Python fortæller os at en tekst streng ikke kan konkateneres sammen med en <code class="docutils literal notranslate"><span class="pre">int</span></code>, hvilket står for <strong>Integer</strong>. Mens <code class="docutils literal notranslate"><span class="pre">str</span></code> står for <strong>String</strong>.</p>
-<p>Desuden viser det ovenstående eksempel at det er muligt at benytte variable som er blevet defineret i tidligere celler. Alle variable som bliver defineret i en Notebook er tilgængelige igennem alle celler i hele den Notebook. Eller, det er ikke helt rigtigt, for variablen er kun tilgængelig i celler efter den er blevet defineret.</p>
-<p>Man kan altid finde ud af hvilken type af variable man arbejder med, ved at bruge funktionen <code class="docutils literal notranslate"><span class="pre">type()</span></code> og indtaste sin variable i parentesen, som set nedenfor.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">detHerErEnVariabel</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>int
-</pre></div>
-</div>
-</div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">detHerErEnVariabel</span></code> er typen <strong>Integer</strong>, altså et heltal. Hvilket vi også havde regnet med. Vi kan også regne med decimaltal, i computerens verden er det dog en helt anden mundfuld. Derfor kaldes decimaltal ikke for <strong>Integers</strong>, men istedet for <strong>Float</strong>.</p>
 </div>
 </div>
 
@@ -363,7 +227,7 @@
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="forord.html" title="previous page">Forord</a>
-    <a class='right-next' id="next-link" href="basal-jupyter.html" title="next page">Hvad er Jupyter Notebooks?</a>
+    <a class='right-next' id="next-link" href="variabel-python.html" title="next page">Variabler i Python</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
